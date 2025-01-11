@@ -6,14 +6,14 @@ import Logo from "@/public/rTMS kliniek.png";
 import { Button } from "./ui/button";
 
 const NavBar = () => {
-  const [hoveredLink, setHoveredLink] = useState(null);
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
-  const handleMouseEnter = (link) => {
-    setHoveredLink(link); // Stel in welke link is gehovered
+  const handleMouseEnter = (linkName: string) => {
+    setHoveredLink(linkName);
   };
 
   const handleMouseLeave = () => {
-    setHoveredLink(null); // Verwijder hover state
+    setHoveredLink(null);
   };
 
   return (
@@ -101,7 +101,7 @@ const NavBar = () => {
             <div className="container mx-auto py-4 px-4">
               {hoveredLink === "watBiedenWij" && (
                 <div className="flex justify-center items-center w-full">
-                  <div className="flex justify-between items-center max-w-[85%] w-full mt-20">
+                  <div className="flex justify-between items-center max-w-[85%] w-full mt-16">
                     <h2 className="text-6xl font-bold text-center">Wat bieden wij</h2>
                     <ul className="flex gap-8 font-semibold text-2xl">
                       <li>
@@ -120,7 +120,7 @@ const NavBar = () => {
               )}
               {hoveredLink === "overOns" && (
                 <div className="flex justify-center items-center w-full">
-                  <div className="flex justify-between items-center max-w-[85%] w-full mt-20">
+                  <div className="flex justify-between items-center max-w-[85%] w-full mt-16">
                     <h2 className="text-6xl font-bold text-center">Over rTMS kliniek</h2>
                     <ul className="flex gap-16 font-semibold text-2xl">
                       <div className="flex flex-col gap-4">
@@ -153,7 +153,7 @@ const NavBar = () => {
               )}
               {hoveredLink === "hulp" && (
                 <div className="flex justify-center items-center w-full">
-                  <div className="flex justify-between items-center max-w-[85%] w-full mt-16">
+                  <div className="flex justify-between items-center max-w-[85%] w-full mt-10">
                     <h2 className="text-6xl font-bold text-center">Wij bieden hulp bij</h2>
                     <ul className="flex gap-16 font-semibold text-2xl">
                       <div className="flex flex-col gap-4">
