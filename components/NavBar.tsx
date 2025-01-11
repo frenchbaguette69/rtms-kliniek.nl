@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/public/rTMS kliniek.png";
 import { Button } from "./ui/button";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
+import { FaBars } from "react-icons/fa";
 
 const NavBar = () => {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
@@ -40,7 +42,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      {/* Witte navigatiebalk met geïntegreerd hover-menu */}
+      {/* Witte navigatiebalk met hover-menu's */}
       <div
         className={`bg-white relative transition-all duration-300 ${
           hoveredLink ? "h-80" : "h-20"
@@ -51,14 +53,14 @@ const NavBar = () => {
           {/* Logo */}
           <Image
             src={Logo}
-            width={200}
+            width={2000}
             height={800}
             alt="logo"
             className="h-14 w-auto object-contain"
           />
 
-          {/* Navigation Links */}
-          <div className="flex gap-8 items-center text-lg">
+          {/* Desktop Navigation Links */}
+          <div className="hidden md:flex gap-8 items-center text-lg">
             <div
               className="relative"
               onMouseEnter={() => handleMouseEnter("watBiedenWij")}
@@ -92,16 +94,50 @@ const NavBar = () => {
               </Link>
             </div>
           </div>
-          <Button variant="outline">Afspraak inplannen</Button>
+          <Button className="hidden md:block" variant="outline">
+            Afspraak inplannen
+          </Button>
+
+          {/* Burger Menu voor Mobile */}
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger>
+                <FaBars size={24} />
+              </SheetTrigger>
+              <SheetContent side="left">
+                <SheetHeader>
+                  <SheetTitle>Menu</SheetTitle>
+                </SheetHeader>
+                <div className="flex flex-col gap-4 mt-8">
+                  <Link href="/wat-bieden-wij" className="text-lg text-gray-800 hover:text-black">
+                    Wat bieden wij
+                  </Link>
+                  <Link href="/over-ons" className="text-lg text-gray-800 hover:text-black">
+                    Over ons
+                  </Link>
+                  <Link href="/hulp" className="text-lg text-gray-800 hover:text-black">
+                    Ik ben op zoek naar hulp
+                  </Link>
+                  <Link href="/locaties" className="text-lg text-gray-800 hover:text-black">
+                    Locaties
+                  </Link>
+                  <Button variant="outline" className="mt-4">
+                    Afspraak inplannen
+                  </Button>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
 
         {/* Hover Menu */}
         {hoveredLink && (
           <div className="absolute left-0 w-full transition-all duration-300">
             <div className="container mx-auto py-4 px-4">
+              {/* Wat bieden wij */}
               {hoveredLink === "watBiedenWij" && (
                 <div className="flex justify-center items-center w-full">
-                  <div className="flex justify-between items-center max-w-[85%] w-full mt-16">
+                  <div className="flex justify-between items-center max-w-[85%] w-full mt-20">
                     <h2 className="text-6xl font-bold text-center">Wat bieden wij</h2>
                     <ul className="flex gap-8 font-semibold text-2xl">
                       <li>
@@ -118,9 +154,10 @@ const NavBar = () => {
                   </div>
                 </div>
               )}
+              {/* Over ons */}
               {hoveredLink === "overOns" && (
                 <div className="flex justify-center items-center w-full">
-                  <div className="flex justify-between items-center max-w-[85%] w-full mt-16">
+                  <div className="flex justify-between items-center max-w-[85%] w-full mt-20">
                     <h2 className="text-6xl font-bold text-center">Over rTMS kliniek</h2>
                     <ul className="flex gap-16 font-semibold text-2xl">
                       <div className="flex flex-col gap-4">
@@ -151,9 +188,10 @@ const NavBar = () => {
                   </div>
                 </div>
               )}
+              {/* Ik ben op zoek naar hulp */}
               {hoveredLink === "hulp" && (
                 <div className="flex justify-center items-center w-full">
-                  <div className="flex justify-between items-center max-w-[85%] w-full mt-10">
+                  <div className="flex justify-between items-center max-w-[85%] w-full mt-16">
                     <h2 className="text-6xl font-bold text-center">Wij bieden hulp bij</h2>
                     <ul className="flex gap-16 font-semibold text-2xl">
                       <div className="flex flex-col gap-4">
@@ -167,16 +205,11 @@ const NavBar = () => {
                             Depressie behandelingen
                           </Link>
                         </li>
-                        <li>
-                          <Link href="/onze-werkwijze" className="text-gray-600 hover:text-black">
-                            Neurofeedback
-                          </Link>
-                        </li>
                       </div>
                       <div className="flex flex-col gap-4">
                         <li>
                           <Link href="/nieuws" className="text-gray-600 hover:text-black">
-                            Qeeg scan
+                            Neurofeedback
                           </Link>
                         </li>
                         <li>
@@ -189,6 +222,7 @@ const NavBar = () => {
                   </div>
                 </div>
               )}
+              {/* Locaties */}
               {hoveredLink === "locaties" && (
                 <div className="flex justify-center items-center w-full">
                   <div className="flex justify-between items-center max-w-[85%] w-full mt-16">
@@ -197,12 +231,12 @@ const NavBar = () => {
                       <div className="flex flex-col gap-4">
                         <li>
                           <Link href="/service1" className="text-gray-600 hover:text-black">
-                            Kennemerstraatweg 464, Unit 1.03, 1851NG Heiloo
+                            Kennemerstraatweg 464, Heiloo
                           </Link>
                         </li>
                         <li>
                           <Link href="/service2" className="text-gray-600 hover:text-black">
-                            Heideweg 1B, 1132 DA Volendam (in het Dijklander Ziekenhuis)
+                            Heideweg 1B, Volendam
                           </Link>
                         </li>
                       </div>
