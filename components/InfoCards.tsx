@@ -51,7 +51,7 @@ const InfoCards = () => {
               href={card.link}
               className="mt-4 text-[#7ed957] font-semibold hover:underline"
             >
-              Lees verder
+              Meer over {card.title}
             </a>
           </div>
         ))}

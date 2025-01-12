@@ -8,9 +8,9 @@ const Locations = () => {
     <div className="container mx-auto py-16 flex flex-col md:flex-row items-center gap-8">
       {/* Left Section: Text and Button */}
       <div className="flex-1">
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+        <h2 className="text-4xl md:text-5xl font-bold leading-tight">
           Locaties van onze klinieken voor het behandelen van depressie en rTMS.
-        </h1>
+        </h2>
         <p className="mt-4 text-gray-600 text-lg">
           Momenteel heeft rTMS kliniek 2 verschillende vestigingen in
           Nederland.
