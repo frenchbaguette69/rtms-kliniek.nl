@@ -1,16 +1,16 @@
-import { IConfig } from 'next-sitemap';
+/** @type {import('next-sitemap').IConfig} */
 
 // Dynamische blogroutes ophalen
-const fetchBlogPaths = async (): Promise<string[]> => {
+const fetchBlogPaths = async () => {
   // Voorbeeld: Haal blogposts op via een API
   const response = await fetch('https://rtms-kliniek.nl/api/blog');
   const blogPosts = await response.json();
 
   // Dynamische blogroutes genereren
-  return blogPosts.map((post: { slug: string }) => `/blog/${post.slug}`);
+  return blogPosts.map((post) => `/blog/${post.slug}`);
 };
 
-const config: IConfig = {
+const config = {
   siteUrl: process.env.SITE_URL || 'https://rtms-kliniek.nl', // Je domeinnaam
   generateRobotsTxt: true, // Genereer robots.txt bestand
   changefreq: 'daily', // Veranderingsfrequentie
@@ -35,4 +35,4 @@ const config: IConfig = {
   },
 };
 
-export default config;
+module.exports = config;
