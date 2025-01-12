@@ -50,14 +50,14 @@ const NavBar = () => {
         onMouseLeave={handleMouseLeave}
       >
         <div className="flex justify-between items-center container h-20 mx-auto px-4">
-          {/* Logo */}
+          <Link href="/">
           <Image
             src={Logo}
             width={2000}
             height={800}
             alt="logo"
             className="h-14 w-auto object-contain"
-          />
+          /></Link>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex gap-8 items-center text-lg">
@@ -89,15 +89,16 @@ const NavBar = () => {
               className="relative"
               onMouseEnter={() => handleMouseEnter("locaties")}
             >
-              <Link href="#" className="text-black hover:underline">
+              <Link href="/vestigingen" className="text-black hover:underline">
                 Locaties
               </Link>
             </div>
           </div>
+          <Link href="/afspraak-maken">
           <Button className="hidden md:block" variant="outline">
             Afspraak inplannen
           </Button>
-
+          </Link>
           {/* Burger Menu voor Mobile */}
           <div className="md:hidden">
             <Sheet>
@@ -109,21 +110,23 @@ const NavBar = () => {
                   <SheetTitle>Menu</SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-4 mt-8">
-                  <Link href="/wat-bieden-wij" className="text-lg text-gray-800 hover:text-black">
+                  <Link href="/behandelingen" className="text-lg text-gray-800 hover:text-black">
                     Wat bieden wij
                   </Link>
-                  <Link href="/over-ons" className="text-lg text-gray-800 hover:text-black">
+                  <Link href="/ons-team" className="text-lg text-gray-800 hover:text-black">
                     Over ons
                   </Link>
-                  <Link href="/hulp" className="text-lg text-gray-800 hover:text-black">
+                  <Link href="/afspraak-maken" className="text-lg text-gray-800 hover:text-black">
                     Ik ben op zoek naar hulp
                   </Link>
-                  <Link href="/locaties" className="text-lg text-gray-800 hover:text-black">
+                  <Link href="/vestigingen" className="text-lg text-gray-800 hover:text-black">
                     Locaties
                   </Link>
+                  <Link href="/afspraak-maken">
                   <Button variant="outline" className="mt-4">
                     Afspraak inplannen
                   </Button>
+                  </Link>
                 </div>
               </SheetContent>
             </Sheet>
@@ -141,12 +144,12 @@ const NavBar = () => {
                     <h2 className="text-6xl font-bold text-center">Wat bieden wij</h2>
                     <ul className="flex gap-8 font-semibold text-2xl">
                       <li>
-                        <Link href="/service1" className="text-gray-600 hover:text-black">
+                        <Link href="/rtms-behandeling" className="text-gray-600 hover:text-black">
                           rTMS behandelingen
                         </Link>
                       </li>
                       <li>
-                        <Link href="/service2" className="text-gray-600 hover:text-black">
+                        <Link href="/depressie-behandeling" className="text-gray-600 hover:text-black">
                           Depressie behandelingen
                         </Link>
                       </li>
@@ -174,12 +177,12 @@ const NavBar = () => {
                       </div>
                       <div className="flex flex-col gap-4">
                         <li>
-                          <Link href="/nieuws" className="text-gray-600 hover:text-black">
+                          <Link href="/blog" className="text-gray-600 hover:text-black">
                             Nieuws
                           </Link>
                         </li>
                         <li>
-                          <Link href="/onze-locaties" className="text-gray-600 hover:text-black">
+                          <Link href="/vestigingen" className="text-gray-600 hover:text-black">
                             Onze locaties
                           </Link>
                         </li>
@@ -196,24 +199,24 @@ const NavBar = () => {
                     <ul className="flex gap-16 font-semibold text-2xl">
                       <div className="flex flex-col gap-4">
                         <li>
-                          <Link href="/ons-team" className="text-gray-600 hover:text-black">
+                          <Link href="/rtms-behandeling" className="text-gray-600 hover:text-black">
                             rTMS behandelingen
                           </Link>
                         </li>
                         <li>
-                          <Link href="/onze-werkwijze" className="text-gray-600 hover:text-black">
+                          <Link href="/depressie-behandeling" className="text-gray-600 hover:text-black">
                             Depressie behandelingen
                           </Link>
                         </li>
                       </div>
                       <div className="flex flex-col gap-4">
                         <li>
-                          <Link href="/nieuws" className="text-gray-600 hover:text-black">
+                          <Link href="/neurofeedback" className="text-gray-600 hover:text-black">
                             Neurofeedback
                           </Link>
                         </li>
                         <li>
-                          <Link href="/onze-locaties" className="text-gray-600 hover:text-black">
+                          <Link href="/eeg-scan" className="text-gray-600 hover:text-black">
                             Eeg scan
                           </Link>
                         </li>

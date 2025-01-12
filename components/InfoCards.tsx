@@ -9,21 +9,21 @@ const InfoCards = () => {
       title: "rTMS",
       description:
         "Psychotherapie gecombineerd met rTMS biedt een snelle, effectieve en veilige behandeling van depressie en dwang (OCS).",
-      link: "/rtms",
+      link: "/rtms-behandeling",
     },
     {
       icon: <FiSmile className=" w-10 h-10" />, // Psychotherapie icon
       title: "Depressie behandeling",
       description:
         "Een bewezen effectieve manier voor het behandelen van verschillende depressieve problemen.",
-      link: "/psychotherapie",
+      link: "/depressie-behandeling",
     },
     {
       icon: <FiSearch className=" w-10 h-10" />, // Intake en Diagnostiek icon
       title: "Intake en Diagnostiek",
       description:
         "Neuropsychologisch onderzoek brengt het cognitieve, emotionele en gedragsmatige functioneren in kaart.",
-      link: "/intake-diagnostiek",
+      link: "/onze-werkwijze",
     },
   ];
 
