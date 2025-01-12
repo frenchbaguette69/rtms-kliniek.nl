@@ -20,10 +20,10 @@ const Hero = () => {
         <div className="container mx-auto text-left">
           <div className="max-w-[800px]">
             <h1 className="text-5xl md:text-6xl font-bold drop-shadow-lg">
-              rTMS behandeling. Ga zonder depressie door het leven.
+            Repetitieve Transcraniële Magnetische Stimulatie (rTMS) behandeling
             </h1>
             <p className="mt-4 text-lg md:text-xl drop-shadow-md">
-              We bieden effectieve behandelingen voor depressie en andere aandoeningen.
+              Maak een einde aan uw stoornissen of depressie. Met een rTMS behandeling van rTMS kliniek
             </p>
           </div>
         </div>
