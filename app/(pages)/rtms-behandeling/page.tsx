@@ -34,7 +34,7 @@ const page = () => {
         </Link>
       </div>
       <div className="flex justify-center">
-        <Image src={rTMS} alt="rTMS" height={600} width={600} />
+        <Image src={rTMS} alt="rTMS" height={600} width={600} title="rtms-behandeling" />
       </div>
       <div className=" container w-full border-t border-gray-500"></div>
       <div className="p-8">
