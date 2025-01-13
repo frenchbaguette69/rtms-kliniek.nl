@@ -229,7 +229,7 @@ const page = () => {
       <div className="bg-[#7ed957] p-16 rounded-3xl text-white flex-col justify-between items-center text-center">
           <h3 className="font-semibold text-3xl md:text-5xl">Contact opnemen voor een afspraak?</h3>
           <Link href="/contact">
-          <Button className="mt-5">Afspraak maken</Button>
+          <Button className="mt-5">Behandeling inplannen</Button>
         </Link>
         </div>        
 

@@ -134,7 +134,7 @@ export default function RTMSInfo() {
               className="flex justify-between items-center cursor-pointer"
               onClick={() => toggleFaq(index)}
             >
-              <h3 className="text-lg font-medium">{faq.question}</h3>
+              <p className="text-lg font-medium">{faq.question}</p>
               {faqOpen[index] ? (
                 <FiChevronUp className="text-xl" />
               ) : (
