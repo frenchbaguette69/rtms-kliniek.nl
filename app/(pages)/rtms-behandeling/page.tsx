@@ -9,8 +9,33 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "rTMS Repetitieve Transcraniële Magnetische Stimulatie | rTMS kliniek",
   description:
-    "repetitieve Transcraniële Magnetische Stimulatie (rTMS) is een niet-invasieve behandeling die magnetische pulsen gebruikt om de activiteit in specifieke hersengebieden te beïnvloeden. Het wordt vaak ingezet bij depressie, angststoornissen, PTSS en chronische pijn.",
+    "Repetitieve Transcraniële Magnetische Stimulatie (rTMS) is een niet-invasieve behandeling die magnetische pulsen gebruikt om de activiteit in specifieke hersengebieden te beïnvloeden. Het wordt vaak ingezet bij depressie, angststoornissen, PTSS en chronische pijn.",
+  openGraph: {
+    title: "rTMS Repetitieve Transcraniële Magnetische Stimulatie | rTMS kliniek",
+    description:
+      "Repetitieve Transcraniële Magnetische Stimulatie (rTMS) is een innovatieve behandeling voor depressie, angststoornissen, PTSS en chronische pijn. Veilig, effectief en wetenschappelijk onderbouwd.",
+    url: "https://rtms-kliniek.nl",
+    siteName: "rTMS kliniek",
+    images: [
+      {
+        url: "https://rtms-kliniek.nl/rTMSkliniek.png ",
+        width: 1200,
+        height: 630,
+        alt: "Afbeelding van rTMS behandeling",
+      },
+    ],
+    locale: "nl_NL",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "rTMS Repetitieve Transcraniële Magnetische Stimulatie | rTMS kliniek",
+    description:
+      "Leer meer over rTMS, een veilige en niet-invasieve behandeling voor depressie, angststoornissen, PTSS en chronische pijn.",
+    images: ["https://rtms-kliniek.nl/rTMSkliniek.png"],
+  },
 };
+
 
 const page = () => {
   return (
