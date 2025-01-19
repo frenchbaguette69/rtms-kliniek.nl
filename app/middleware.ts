@@ -2,10 +2,10 @@ import { withAuth } from "next-auth/middleware";
 
 export default withAuth({
   pages: {
-    signIn: "/login", // Redirect naar de loginpagina als de gebruiker niet is ingelogd
+    signIn: "/login", // Verwijs niet-ingelogde gebruikers naar de loginpagina
   },
 });
 
 export const config = {
-  matcher: ["/admin/:path*"], // Bescherm alle routes die beginnen met /admin
+  matcher: ["/admin/:path*"], // Bescherm alleen specifieke routes, niet /api/auth
 };
