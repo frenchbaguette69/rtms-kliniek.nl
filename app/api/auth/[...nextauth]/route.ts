@@ -2,12 +2,11 @@ import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaClient } from "@prisma/client";
 
-// Prisma Singleton Configuratie
 const prisma = new PrismaClient();
 
 export const authOptions: NextAuthOptions = {
   session: {
-    strategy: "jwt", // Gebruik JSON Web Tokens voor sessiebeheer
+    strategy: "jwt", // Gebruik JSON Web Tokens
   },
   providers: [
     CredentialsProvider({
@@ -21,28 +20,21 @@ export const authOptions: NextAuthOptions = {
           throw new Error("Email en wachtwoord zijn verplicht.");
         }
 
-        // Zoek de gebruiker in de database
+        // Controleer of de gebruiker in de database bestaat
         const user = await prisma.user.findUnique({
           where: { email: credentials.email },
         });
 
-        if (!user) {
-          throw new Error("Gebruiker niet gevonden.");
-        }
-
-        // Controleer wachtwoord (voor platte tekst, gebruik bcrypt voor hashing)
-        if (user.password !== credentials.password) {
+        if (!user || user.password !== credentials.password) {
           throw new Error("Onjuiste inloggegevens.");
         }
 
-        // Retourneer de gebruiker
-        return { id: user.id, email: user.email, name: user.name };
+        return { id: user.id, email: user.email }; // Retourneer de gebruiker
       },
     }),
   ],
   callbacks: {
     async jwt({ token, user }) {
-      // Voeg extra gegevens toe aan het token
       if (user) {
         token.id = user.id;
         token.email = user.email;
@@ -50,7 +42,6 @@ export const authOptions: NextAuthOptions = {
       return token;
     },
     async session({ session, token }) {
-      // Voeg token-gegevens toe aan de sessie
       if (token) {
         session.user = {
           id: token.id as string,
@@ -60,9 +51,11 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
   },
-  secret: process.env.NEXTAUTH_SECRET, // Zorg dat deze variabele correct is ingesteld
+  secret: process.env.NEXTAUTH_SECRET, // Zorg dat deze variabele is ingesteld
 };
 
+// Maak de NextAuth-handler aan
 const handler = NextAuth(authOptions);
 
+// Exporteer de handler voor GET en POST-methodes
 export { handler as GET, handler as POST };
