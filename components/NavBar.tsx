@@ -233,12 +233,12 @@ const NavBar = () => {
                     <ul className="flex gap-8 font-semibold text-2xl">
                       <div className="flex flex-col gap-4">
                         <li>
-                          <Link href="/service1" className="text-gray-600 hover:text-black">
+                          <Link href="/vestigingen" className="text-gray-600 hover:text-black">
                             Kennemerstraatweg 464, Heiloo
                           </Link>
                         </li>
                         <li>
-                          <Link href="/service2" className="text-gray-600 hover:text-black">
+                          <Link href="/vestigingen" className="text-gray-600 hover:text-black">
                             Heideweg 1B, Volendam
                           </Link>
                         </li>
