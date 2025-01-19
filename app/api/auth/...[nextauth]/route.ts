@@ -6,14 +6,14 @@ const prisma = new PrismaClient();
 
 export const authOptions: NextAuthOptions = {
   session: {
-    strategy: "jwt", // Gebruik JWT voor sessies
+    strategy: "jwt", // Gebruik JSON Web Tokens voor sessies
   },
   providers: [
     CredentialsProvider({
       name: "Email en Wachtwoord",
       credentials: {
         email: { label: "Email", type: "text" },
-        password: { label: "Wachtwoord", type: "password" },
+        password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
@@ -29,9 +29,9 @@ export const authOptions: NextAuthOptions = {
           throw new Error("Gebruiker niet gevonden.");
         }
 
-        // Vergelijk wachtwoorden (in dit voorbeeld geen hashing gebruikt)
+        // Vergelijk wachtwoord (let op: geen hashing in dit voorbeeld)
         if (user.password !== credentials.password) {
-          throw new Error("Onjuist wachtwoord.");
+          throw new Error("Onjuiste inloggegevens.");
         }
 
         // Retourneer de gebruiker als de login succesvol is
@@ -41,7 +41,7 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     async jwt({ token, user }) {
-      // Voeg user-info toe aan het token bij inloggen
+      // Voeg extra gegevens toe aan het token
       if (user) {
         token.id = user.id;
         token.email = user.email;
@@ -49,7 +49,7 @@ export const authOptions: NextAuthOptions = {
       return token;
     },
     async session({ session, token }) {
-      // Voeg token-info toe aan de sessie
+      // Voeg token-informatie toe aan de sessie
       if (token) {
         session.user = {
           id: token.id as string,
@@ -59,7 +59,7 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
   },
-  secret: process.env.NEXTAUTH_SECRET, // Zorg voor een veilige NEXTAUTH_SECRET in .env
+  secret: process.env.NEXTAUTH_SECRET, // Zorg voor een veilige random string in je .env bestand
 };
 
 const handler = NextAuth(authOptions);
