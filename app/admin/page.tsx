@@ -1,6 +1,5 @@
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/app/api/auth/[nextauth]/route";
-import LogoutButton from "@/components/sign-out";
+import { authOptions } from "@/app/api/auth/[nextauth]/route";  
 
 export default async function Dashboard() {
   const session = await getServerSession(authOptions);
@@ -13,7 +12,6 @@ export default async function Dashboard() {
     <div>
       <h1>Welkom, {session.user?.email}</h1>
       <p>Dit is een beveiligde pagina.</p>
-      <LogoutButton />
     </div>
   );
 }
