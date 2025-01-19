@@ -17,6 +17,7 @@ export const authOptions: NextAuthOptions = {
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
+          console.error("Email en wachtwoord zijn verplicht.");
           throw new Error("Email en wachtwoord zijn verplicht.");
         }
 
@@ -26,13 +27,17 @@ export const authOptions: NextAuthOptions = {
         });
 
         if (!user) {
+          console.error("Gebruiker niet gevonden:", credentials.email);
           throw new Error("Gebruiker niet gevonden.");
         }
 
-        // Vergelijk wachtwoord (let op: geen hashing in dit voorbeeld)
+        // Vergelijk wachtwoord (hier zonder hashing, niet aanbevolen in productie)
         if (user.password !== credentials.password) {
+          console.error("Wachtwoord onjuist voor gebruiker:", credentials.email);
           throw new Error("Onjuiste inloggegevens.");
         }
+
+        console.log("Succesvol ingelogd:", user.email);
 
         // Retourneer de gebruiker als de login succesvol is
         return { id: user.id, email: user.email, name: user.name };
@@ -59,6 +64,7 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
   },
+  debug: true, // Debugging ingeschakeld voor ontwikkelomgeving
   secret: process.env.NEXTAUTH_SECRET, // Zorg voor een veilige random string in je .env bestand
 };
 

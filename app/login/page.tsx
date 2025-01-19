@@ -8,15 +8,21 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const handleLogin = async () => {
+    console.log("Invoer email:", email);
+    console.log("Invoer wachtwoord:", password);
+
     const res = await signIn("credentials", {
+      redirect: false,
       email,
       password,
-      redirect: true,
-      callbackUrl: "/dashboard", // Redirect naar /dashboard na inloggen
     });
+
+    console.log("Sign-in response:", res);
 
     if (!res?.ok) {
       alert("Inloggen mislukt. Controleer je gegevens.");
+    } else {
+      window.location.href = "/admin"; // Redirect na succesvolle login
     }
   };
 
