@@ -1,13 +1,15 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma"; // Zorg dat Prisma via een Singleton wordt geïmporteerd
 
-const prisma = new PrismaClient();
-
+// NextAuth-configuratie
 export const authOptions: NextAuthOptions = {
+  // Instellen van sessiebeheer
   session: {
-    strategy: "jwt", // Gebruik JSON Web Tokens
+    strategy: "jwt", // Gebruik JSON Web Tokens voor sessies
   },
+
+  // Providers configureren (CredentialsProvider in dit geval)
   providers: [
     CredentialsProvider({
       name: "Email en Wachtwoord",
@@ -20,21 +22,30 @@ export const authOptions: NextAuthOptions = {
           throw new Error("Email en wachtwoord zijn verplicht.");
         }
 
-        // Controleer of de gebruiker in de database bestaat
+        // Controleer of de gebruiker bestaat in de database
         const user = await prisma.user.findUnique({
           where: { email: credentials.email },
         });
 
-        if (!user || user.password !== credentials.password) {
+        if (!user) {
+          throw new Error("Gebruiker niet gevonden.");
+        }
+
+        // Controleer het wachtwoord (gebruik bcrypt voor beveiliging)
+        if (user.password !== credentials.password) {
           throw new Error("Onjuiste inloggegevens.");
         }
 
-        return { id: user.id, email: user.email }; // Retourneer de gebruiker
+        // Retourneer de gebruiker
+        return { id: user.id, email: user.email };
       },
     }),
   ],
+
+  // Callbacks instellen
   callbacks: {
     async jwt({ token, user }) {
+      // Voeg user-informatie toe aan het token
       if (user) {
         token.id = user.id;
         token.email = user.email;
@@ -42,6 +53,7 @@ export const authOptions: NextAuthOptions = {
       return token;
     },
     async session({ session, token }) {
+      // Voeg token-informatie toe aan de sessie
       if (token) {
         session.user = {
           id: token.id as string,
@@ -51,11 +63,7 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
   },
-  secret: process.env.NEXTAUTH_SECRET, // Zorg dat deze variabele is ingesteld
+
+  // Secret voor encryptie
+  secret: process.env.NEXTAUTH_SECRET, // Zorg dat deze variabele correct is ingesteld
 };
-
-// Maak de NextAuth-handler aan
-const handler = NextAuth(authOptions);
-
-// Exporteer de handler voor GET en POST-methodes
-export { handler as GET, handler as POST };
