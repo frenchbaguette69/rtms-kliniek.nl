@@ -3,7 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { prisma } from "@/lib/prisma"; // Zorg dat Prisma via een Singleton wordt geïmporteerd
 
 // NextAuth-configuratie
-export const authOptions: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
   // Instellen van sessiebeheer
   session: {
     strategy: "jwt", // Gebruik JSON Web Tokens voor sessies
@@ -67,3 +67,9 @@ export const authOptions: NextAuthOptions = {
   // Secret voor encryptie
   secret: process.env.NEXTAUTH_SECRET, // Zorg dat deze variabele correct is ingesteld
 };
+
+// Handler voor de Next.js API
+const handler = NextAuth(authOptions);
+
+// Exporteer de handler voor zowel GET als POST methodes
+export { handler as GET, handler as POST };
