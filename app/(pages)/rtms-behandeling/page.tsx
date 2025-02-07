@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     title: "rTMS Repetitieve Transcraniële Magnetische Stimulatie | rTMS kliniek",
     description:
       "Repetitieve Transcraniële Magnetische Stimulatie (rTMS) is een innovatieve behandeling voor depressie, angststoornissen, PTSS en chronische pijn. Veilig, effectief en wetenschappelijk onderbouwd.",
-    url: "https://rtms-kliniek.nl",
+    url: "https://rtms-kliniek.nl/rtms-behandeling",
     siteName: "rTMS kliniek",
     images: [
       {
-        url: "https://rtms-kliniek.nl/rTMSkliniek.png ",
-        width: 1200,
-        height: 630,
-        alt: "Afbeelding van rTMS behandeling",
+        url: "https://rtms-kliniek.nl/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FrTMS.6b099b19.png&w=640&q=75",
+        width: 640,
+        height: 480,
+        alt: "rTMS behandeling afbeelding"
       },
     ],
     locale: "nl_NL",
@@ -38,7 +38,58 @@ export const metadata: Metadata = {
 
 
 const page = () => {
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": "rTMS Behandeling",
+    "alternateName": "Repetitieve Transcraniële Magnetische Stimulatie",
+    "url": "https://rtms-kliniek.nl/rtms-behandeling",
+    "image": "https://rtms-kliniek.nl/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FrTMS.6b099b19.png&w=640&q=75",
+    "description": "rTMS (Repetitieve Transcraniële Magnetische Stimulatie) is een innovatieve, niet-invasieve behandeling die magnetische pulsen gebruikt om specifieke hersengebieden te stimuleren. Deze therapie is effectief bij de behandeling van depressie, angststoornissen en OCD.",
+    "medicalSpecialty": "rTMS behandelingen",
+    "procedureType": "Noninvasive",
+    "bodyLocation": "Hersenen",
+    "provider": {
+      "@type": "MedicalOrganization",
+      "name": "rTMS Kliniek",
+      "url": "https://rtms-kliniek.nl",
+      "logo": "https://rtms-kliniek.nl/logo.png",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Kennemerstraatweg 464",
+          "addressLocality": "Heiloo",
+          "addressRegion": "Noord-Holland",
+          "postalCode": "1851NG",
+          "addressCountry": "NL"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Heideweg 1B",
+          "addressLocality": "Volendam",
+          "addressRegion": "Noord-Holland",
+          "postalCode": "1132DA",
+          "addressCountry": "NL"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+31 6 12345678",
+        "contactType": "customer service",
+        "availableLanguage": ["Dutch", "English"]
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "74"
+    }
+  };
+
   return (
+    <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <div className="container mt-5 md:mt-20">
       <h1 className="text-center font-semibold text-2xl md:text-6xl">
         rTMS Repetitieve Transcraniële Magnetische Stimulatie behandeling
@@ -259,6 +310,7 @@ const page = () => {
         </div>        
 
       <RTMSInfo />
+    </div>
     </div>
   );
 };
