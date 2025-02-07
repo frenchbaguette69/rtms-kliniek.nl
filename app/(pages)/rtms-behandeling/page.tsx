@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "rTMS Behandling tegen depressie bij onze kliniek vergoed door zorgverzekeraar | rTMS kliniek",
+  title: "rTMS Behandling tegen depressie vergoed door zorgverzekeraar | rTMS kliniek",
   description:
     "Repetitieve Transcraniële Magnetische Stimulatie (rTMS) is een Behandling die wij toepassen met magnetischme tegen depressie, rTMS angstoornissen. Hiervoor zijn rTMS behandelingen zeer geschikt. Dit rTMS behandeling wordt ook voor 80 procent vergoed in de basis zorgverzekering. Plan nu online jouw rTMS behandeling en ervaar de positieve effecten van deze behandeling",
   openGraph: {
