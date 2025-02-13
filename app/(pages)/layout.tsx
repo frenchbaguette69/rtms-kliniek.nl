@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Repetitieve Transcraniële Magnetische Stimulatie (rTMS) behandeling | rTMS kliniek",
+  title: "rTMS behandeling | rTMS kliniek",
   description:
-    "Repetitieve Transcraniële Magnetische Stimulatie (rTMS) is een behandeling bij depressie, psychische problemen op bipolaire stoornis. Ervaart u ook stemmingswisselingen? Boek een behandeling bij rTMS kliniek.",
+    "Repetitieve Transcraniële Magnetische Stimulatie (rTMS) is een rTMS behandeling bij depressie, psychische problemen op bipolaire stoornis. Ervaart u ook stemmingswisselingen? Boek een behandeling bij rTMS kliniek.",
 };
 
 export default function RootLayout({
@@ -41,7 +41,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavBar />
-        <div className="pt-20 md:pt-28">{children}</div>
+        <div className="">{children}</div>
         <div className="mt-16">
           <Footer />
         </div>

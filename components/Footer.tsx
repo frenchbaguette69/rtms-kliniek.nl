@@ -2,12 +2,12 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/public/hoofdlogo.png";
+import Logo from "@/public/RTMSlogo.png";
 import { FaYoutube, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8">
+    <footer className="bg-gray-200  py-8">
       <div className="container mx-auto px-4">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
@@ -20,7 +20,6 @@ const Footer = () => {
               alt="rTMS kliniek logo"
               className="mb-4"
             />
-            <h2 className="text-3xl font-semibold ml-8">rTMS kliniek</h2>
           </div>
 
           {/* Links Section */}

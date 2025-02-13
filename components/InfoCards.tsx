@@ -6,7 +6,7 @@ const InfoCards = () => {
   const cards = [
     {
       icon: <FaBrain className=" w-10 h-10" />, // rTMS icon
-      title: "rTMS",
+      title: "rTMS behandeling",
       description:
         "Psychotherapie gecombineerd met rTMS biedt een snelle, effectieve en veilige behandeling van depressie en dwang (OCS).",
       link: "/rtms-behandeling",
@@ -28,7 +28,7 @@ const InfoCards = () => {
   ];
 
   return (
-    <div className="container  py-12">
+    <div className="w-[90%] py-12 mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {cards.map((card, index) => (
           <div

@@ -4,7 +4,7 @@ import { signIn } from "next-auth/react";
 import Image from "next/image";
 import { useState } from "react";
 import Background from "@/public/hero.jpg"; // Zorg dat de afbeelding in de public-map staat
-import Logo from "@/public/rTMSkliniek.png"
+import Logo from "@/public/RTMSlogo.png"
 
 export default function Login() {
   const [email, setEmail] = useState("");

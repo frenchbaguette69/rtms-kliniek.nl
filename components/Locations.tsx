@@ -9,7 +9,7 @@ const Locations = () => {
       {/* Left Section: Text and Button */}
       <div className="flex-1">
         <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-          Locaties van onze klinieken voor het behandelen van depressie en rTMS.
+          rTMS behandeling? Bezoek een van onze klnieken.
         </h2>
         <p className="mt-4 text-gray-600 text-lg">
           Momenteel heeft rTMS kliniek 2 verschillende vestigingen in
@@ -22,7 +22,7 @@ const Locations = () => {
           <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#7ed957]">
             <FiArrowUpRight className="w-6 h-6" />
           </div>
-          Vind een vestiging
+          Vind een rTMS kliniek
         </a>
       </div>
 

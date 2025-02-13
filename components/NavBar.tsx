@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/public/rTMSkliniek.png";
+import Logo from "@/public/RTMSlogo.png";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { FaBars } from "react-icons/fa";
@@ -19,37 +19,14 @@ const NavBar = () => {
   };
 
   return (
-    <div className="absolute top-0 left-0 w-full z-10">
-      {/* Zwarte bovenste navigatiebalk */}
-      <div className="h-10 bg-black hidden md:block">
-        <div className="container h-full flex items-center justify-between mx-auto px-4">
-          <div className="font-semibold flex gap-4 text-sm">
-            <Link href="/rtms-behandeling" className="text-gray-400 hover:text-white">
-              rTMS behandeling
-            </Link>
-            <Link href="/depressie-behandeling" className="text-gray-400 hover:text-white">
-              Depressie behandeling
-            </Link>
-          </div>
-          <div className="font-semibold flex gap-4 text-sm">
-            <Link href="/faq" className="text-gray-400 hover:text-white">
-              Veelgestelde vragen
-            </Link>
-            <Link href="/afspraak-maken" className="text-gray-400 hover:text-white">
-              Afspraak maken
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Witte navigatiebalk met hover-menu's */}
+    <div className="sticky top-0 left-0 z-10">
       <div
-        className={`bg-white relative transition-all duration-300 ${
+        className={`bg-white relative transition-all duration-10 ${
           hoveredLink ? "h-80" : "h-20"
-        } border-b`}
+        } `}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="flex justify-between items-center container h-20 mx-auto px-4">
+        <div className="flex justify-between items-center h-20 mx-auto w-[90%] px-4">
           <Link href="/">
           <Image
             src={Logo}
@@ -95,7 +72,7 @@ const NavBar = () => {
             </div>
           </div>
           <Link href="/afspraak-maken">
-          <Button className="hidden md:block" variant="outline">
+          <Button className="hidden md:block">
             Afspraak inplannen
           </Button>
           </Link>

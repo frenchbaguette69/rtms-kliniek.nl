@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "rTMS Repetitieve Transcraniële Magnetische Stimulatie | rTMS kliniek",
     description:
       "Leer meer over rTMS, een veilige en niet-invasieve behandeling voor depressie, angststoornissen, PTSS en chronische pijn.",
-    images: ["https://rtms-kliniek.nl/rTMSkliniek.png"],
+    images: ["https://rtms-kliniek.nl/rTMSlogo.png"],
   },
 };
 
