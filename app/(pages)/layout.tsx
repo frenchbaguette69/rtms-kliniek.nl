@@ -33,9 +33,43 @@ export default function RootLayout({
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/hoofdlogo.png" // Ensure hoofdlogo.png is in the /public directory
+          href="/hoofdlogo.png"
         />
         <meta name="theme-color" content="#ffffff" />
+
+        {/* Structured Data (JSON-LD) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "rTMS Behandeling - Effectieve Therapie voor Depressie & Angst",
+              "url": "https://rtms-kliniek.nl",
+              "description":
+                "rTMS Behandeling is een innovatieve, niet-invasieve therapie voor depressie, angststoornissen en OCD. Ontdek hoe rTMS therapie jou kan helpen en plan een intake.",
+              "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2668&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              "publisher": {
+                "@type": "Organization",
+                "name": "rTMS Kliniek",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://rtms-kliniek.nl/RTMSlogo.png"
+                }
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Jouw Naam"
+              },
+              "mainEntity": {
+                "@type": "MedicalWebPage",
+                "name": "rTMS Therapie",
+                "medicalSpecialty": "Neurology",
+                "url": "https://rtms-kliniek.nl/rtms-behandeling"
+              }
+            }),
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

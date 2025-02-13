@@ -21,7 +21,7 @@ const Hero = () => {
 
         {/* Text Content */}
         <div className="absolute inset-0 flex flex-col justify-center items-start text-white px-8 md:px-16 max-w-3xl">
-          <p className="flex items-center text-xl">
+          <p className="flex items-center text-sm md:text-xl">
             <span className="mr-2">🔹 10 000+ </span> Tevreden patiënten met rTMS behandeling
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mt-2">
