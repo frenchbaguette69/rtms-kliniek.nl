@@ -9,7 +9,7 @@ const Locations = () => {
       {/* Left Section: Text and Button */}
       <div className="flex-1">
         <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-          rTMS behandeling? Bezoek een van onze klnieken.
+          rTMS behandelen? Bezoek een van onze klnieken.
         </h2>
         <p className="mt-4 text-gray-600 text-lg">
           Momenteel heeft rTMS kliniek 2 verschillende vestigingen in

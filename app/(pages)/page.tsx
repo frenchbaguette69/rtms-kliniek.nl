@@ -21,6 +21,7 @@ export default function Home() {
             width={2000}
             height={2000}
             className="h-full w-full object-cover rounded-3xl"
+            title="rTMS behandeling bij rTMS kliniel"
           />
         </div>
 
@@ -89,7 +90,7 @@ export default function Home() {
       </ul>
 
       <div className="mt-12">
-        <a href="/rtms-behandeling" className="px-6 py-3 text-lg font-semibold text-black bg-white rounded-full hover:bg-gray-200 transition">
+        <a href="/rtms-behandeling" className="mt-6 inline-block px-6 py-3 text-lg font-semibold text-black bg-[#7ed957] rounded-lg hover:bg-green-600 transition">
           meer over rTMS behandeling
         </a>
       </div>
@@ -103,6 +104,7 @@ export default function Home() {
         width={2000}
         height={2000}
         className="rounded-[3rem] md:rounded-[5rem] object-cover w-full h-full"
+        title="rTMS behandeling"
       />
     </div>
   </div>

@@ -41,7 +41,7 @@ const InfoCards = () => {
             </div>
 
             {/* Title */}
-            <h3 className="mt-4 text-2xl font-bold">{card.title}</h3>
+            <p className="mt-4 text-2xl font-bold">{card.title}</p>
 
             {/* Description */}
             <p className="mt-2 text-gray-600">{card.description}</p>
