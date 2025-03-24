@@ -110,8 +110,8 @@ export default function Home() {
   </div>
 </div>
     
-    {/* Scientific Research Section - Adjust container and image size */}
-    <div className="container w-full max-w-7xl mx-auto border-t border-gray-500"></div>
+    {/* Scientific Research Section */}
+    <div className="container w-full max-w-7xl mx-auto"></div>
     <div className="container max-w-7xl mx-auto p-8">
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <div className="md:w-2/3">
@@ -153,8 +153,8 @@ export default function Home() {
       </div>
     </div>
     
-    {/* Different rTMS Techniques - Adjust container and image size */}
-    <div className="container max-w-7xl mx-auto border-t border-gray-500"></div>
+    {/* Different rTMS Techniques */}
+    <div className="container max-w-7xl mx-auto"></div>
     <div className="container max-w-7xl mx-auto p-8">
       <h2 className="text-3xl md:text-4xl font-semibold mb-5">Verschillende rTMS Technieken</h2>
       
@@ -209,8 +209,8 @@ export default function Home() {
       </div>
     </div>
     
-    {/* rTMS and Medication - Adjust container and image sizes */}
-    <div className="container max-w-7xl mx-auto border-t border-gray-500"></div>
+    {/* rTMS and Medication */}
+    <div className="container max-w-7xl mx-auto"></div>
     <div className="container max-w-7xl mx-auto p-8">
       <h2 className="text-3xl md:text-4xl font-semibold mb-5">rTMS en Medicatie</h2>
       <div className="flex flex-col md:flex-row gap-8 items-start">
@@ -239,7 +239,6 @@ export default function Home() {
             </li>
           </ul>
           
-          {/* Reduce comparison image size */}
           <div className="mt-6 rounded-xl overflow-hidden">
             <Image 
               src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=600&h=300&auto=format&fit=crop" 
@@ -262,7 +261,6 @@ export default function Home() {
             </p>
           </div>
           
-          {/* Reduce illustrative image size */}
           <div className="mt-6 rounded-xl overflow-hidden">
             <Image 
               src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=400&h=500&auto=format&fit=crop" 
@@ -278,8 +276,8 @@ export default function Home() {
       </div>
     </div>
     
-    {/* Practical Information - Adjust container and banner size */}
-    <div className="container max-w-7xl mx-auto border-t border-gray-500"></div>
+    {/* Practical Information */}
+    <div className="container max-w-7xl mx-auto"></div>
     <div className="container max-w-7xl mx-auto p-8">
       <h2 className="text-3xl md:text-4xl font-semibold mb-5">Praktische Informatie over rTMS Behandelingen</h2>
       
@@ -320,7 +318,6 @@ export default function Home() {
           </div>
         </div>
         
-        {/* Continue with the other three info boxes, adding the text-base md:text-lg classes */}
         <div className="flex flex-col md:flex-row gap-4 items-start">
           <div className="md:w-1/4 flex justify-center">
             <div className="h-16 w-16 md:h-20 md:w-20 rounded-full bg-[#7ed957] flex items-center justify-center">
@@ -341,8 +338,8 @@ export default function Home() {
       </div>
     </div>
     
-    {/* FAQ section - Adjust container and image sizes */}
-    <div className="container max-w-7xl mx-auto border-t border-gray-500"></div>
+    {/* FAQ section */}
+    <div className="container max-w-7xl mx-auto"></div>
     <div className="container max-w-7xl mx-auto p-8">
       <div className="flex flex-col md:flex-row gap-8 items-start">
         <div className="md:w-2/3">
@@ -358,7 +355,6 @@ export default function Home() {
               </p>
             </div>
             
-            {/* Continue with the other FAQ items, adding the text-base md:text-lg classes */}
             <div>
               <h3 className="text-xl md:text-2xl font-semibold mb-2">Hoe lang duurt het voordat rTMS werkt?</h3>
               <p className="text-base md:text-lg">
@@ -393,11 +389,11 @@ export default function Home() {
               unoptimized
               quality={100}
             />
-            <div className="mt-4 bg-[#7ed957] p-6 rounded-xl text-white">
+            <div className="mt-4 bg-green-950 p-6 rounded-xl text-white">
               <h3 className="font-bold text-xl mb-2">Heeft u nog andere vragen?</h3>
               <p className="mb-4 text-base md:text-lg">Neem contact met ons op voor meer informatie over rTMS behandelingen.</p>
               <Link href="/contact">
-                <span className="inline-block px-4 py-2 bg-white text-[#7ed957] rounded-lg font-semibold hover:bg-gray-100 transition">
+                <span className="inline-block px-4 py-2 bg-white text-green-900 rounded-lg font-semibold hover:bg-gray-200 transition">
                   Contact opnemen
                 </span>
               </Link>
@@ -407,8 +403,8 @@ export default function Home() {
       </div>
     </div>
     
-    {/* rTMS at our clinic - Adjust container and gallery */}
-    <div className="container max-w-7xl mx-auto border-t border-gray-500"></div>
+    {/* rTMS at our clinic */}
+    <div className="container max-w-7xl mx-auto"></div>
     <div className="container max-w-7xl mx-auto p-8">
       <h2 className="text-3xl md:text-4xl font-semibold mb-5">rTMS bij rTMS Kliniek</h2>
       
@@ -443,7 +439,6 @@ export default function Home() {
       </p>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5">
-        {/* Update all six advantage boxes with the proper text size */}
         <div className="bg-gray-50 p-5 rounded-lg shadow-sm">
           <h3 className="text-lg md:text-xl font-semibold mb-2 text-[#7ed957]">Gepersonaliseerde Behandelplannen</h3>
           <p className="text-base md:text-lg">
@@ -471,7 +466,7 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Testimonial with adjusted image size */}
+      {/* Testimonial */}
       <div className="mt-12 bg-gray-50 rounded-3xl overflow-hidden">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/3">
@@ -503,9 +498,100 @@ export default function Home() {
       </div>
     </div>
     
+    {/* Treatment Success Statistics */}
+    <div className="container max-w-7xl mx-auto"></div>
+    <div className="container max-w-7xl mx-auto p-8">
+      <h2 className="text-3xl md:text-4xl font-semibold mb-8">Behandelresultaten en Statistieken</h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <div className="text-4xl md:text-5xl font-bold text-green-900 mb-2">70%</div>
+          <h3 className="text-xl font-semibold mb-2">Respons bij Depressie</h3>
+          <p className="text-gray-600">Van de patiënten ervaart significante verbetering na een volledige behandeling</p>
+        </div>
+        
+        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <div className="text-4xl md:text-5xl font-bold text-green-900 mb-2">65%</div>
+          <h3 className="text-xl font-semibold mb-2">Angstreductie</h3>
+          <p className="text-gray-600">Van de patiënten met angststoornissen ziet vermindering van klachten</p>
+        </div>
+        
+        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <div className="text-4xl md:text-5xl font-bold text-green-900 mb-2">4.8</div>
+          <h3 className="text-xl font-semibold mb-2">Patiënttevredenheid</h3>
+          <p className="text-gray-600">Gemiddelde waardering van onze patiënten (schaal 1-5)</p>
+        </div>
+        
+        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <div className="text-4xl md:text-5xl font-bold text-green-900 mb-2">12+</div>
+          <h3 className="text-xl font-semibold mb-2">Jaar Ervaring</h3>
+          <p className="text-gray-600">Met rTMS behandelingen en duizenden succesvol behandelde patiënten</p>
+        </div>
+      </div>
+      
+      <div className="mt-8 bg-gray-50 p-6 rounded-xl">
+        <p className="text-base md:text-lg text-gray-700">
+          * Deze resultaten zijn gebaseerd op onze klinische data en patiëntfeedback over de afgelopen jaren. 
+          Individuele resultaten kunnen variëren en zijn afhankelijk van verschillende factoren zoals de specifieke 
+          aandoening, ernst van de klachten en andere individuele omstandigheden.
+        </p>
+      </div>
+    </div>
+    
+    {/* Treatment Process Timeline */}
+    <div className="container max-w-7xl mx-auto p-8">
+      <h2 className="text-3xl md:text-4xl font-semibold mb-8 text-center">Uw rTMS Behandeltraject</h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="relative flex flex-col items-center text-center">
+          <div className="h-16 w-16 bg-green-950 rounded-full flex items-center justify-center mb-4">
+            <span className="text-2xl font-bold text-white">1</span>
+          </div>
+          <h3 className="text-xl font-semibold mb-3">Intake en Beoordeling</h3>
+          <p className="text-gray-600 mb-6 max-w-sm">
+            Tijdens een uitgebreid intakegesprek bespreken we uw klachten, medische geschiedenis en behandeldoelen. 
+            We bepalen samen of rTMS een geschikte behandeling voor u is.
+          </p>
+          <div className="hidden md:block absolute h-1 bg-green-950 w-full top-8 left-1/2 -z-10"></div>
+        </div>
+        
+        <div className="relative flex flex-col items-center text-center">
+          <div className="h-16 w-16 bg-green-950 rounded-full flex items-center justify-center mb-4">
+            <span className="text-2xl font-bold text-white">2</span>
+          </div>
+          <h3 className="text-xl font-semibold mb-3">Behandelplan op Maat</h3>
+          <p className="text-gray-600 mb-6 max-w-sm">
+            We stellen een gepersonaliseerd behandelplan op, inclusief het aantal sessies, de frequentie en de 
+            specifieke rTMS-techniek die het beste bij uw situatie past.
+          </p>
+          <div className="hidden md:block absolute h-1 bg-green-950 w-full top-8 left-1/2 -z-10"></div>
+        </div>
+        
+        <div className="relative flex flex-col items-center text-center">
+          <div className="h-16 w-16 bg-green-950 rounded-full flex items-center justify-center mb-4">
+            <span className="text-2xl font-bold text-white">3</span>
+          </div>
+          <h3 className="text-xl font-semibold mb-3">Start Behandeling</h3>
+          <p className="text-gray-600 mb-6 max-w-sm">
+            De behandeling start met een proefsessie om de juiste locatie en intensiteit te bepalen. Daarna volgt 
+            het volledige behandeltraject van meestal 4-6 weken.
+          </p>
+        </div>
+      </div>
+      
+      <div className="mt-8 bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center max-w-3xl mx-auto">
+        <h3 className="text-xl font-semibold mb-3">Monitoring en Nazorg</h3>
+        <p className="text-base md:text-lg text-gray-700">
+          Gedurende het hele traject monitoren we uw voortgang nauwkeurig. Na afloop van de behandeling volgt een 
+          evaluatie en bespreken we eventuele vervolgstappen of onderhoudsbehandelingen. We blijven beschikbaar 
+          voor vragen en ondersteuning.
+        </p>
+      </div>
+    </div>
+    
     {/* CTA banner with adjusted container */}
     <div className="container max-w-7xl mx-auto">
-      <div className="py-16 bg-gradient-to-r from-green-900 to-[#7ed957] my-12 w-full mx-auto rounded-[4rem]">
+      <div className="py-16 bg-green-950 my-12 w-full mx-auto rounded-[4rem]">
         <div className="container mx-auto text-center px-4">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">Klaar om de volgende stap te zetten?</h2>
           <p className="text-lg md:text-xl text-white max-w-3xl mx-auto mb-8">
@@ -514,7 +600,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <span className="inline-block px-8 py-4 bg-white text-green-900 rounded-lg text-base md:text-lg font-semibold hover:bg-gray-100 transition">
+              <span className="inline-block px-8 py-4 bg-white text-green-900 rounded-lg text-base md:text-lg font-semibold hover:bg-gray-200 transition">
                 Afspraak maken
               </span>
             </Link>
