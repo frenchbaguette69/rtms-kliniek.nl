@@ -90,8 +90,11 @@ const NavBar = () => {
                   <SheetTitle>Menu</SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-4 mt-8">
-                  <Link href="/behandelingen" className="text-lg text-gray-800 hover:text-black" onClick={() => setOpen(false)}>
-                    Wat bieden wij
+                  <Link href="/rtms-behandeling" className="text-lg text-gray-800 hover:text-black" onClick={() => setOpen(false)}>
+                    RTMS Behandeling
+                  </Link>
+                  <Link href="/depressie-behandeling" className="text-lg text-gray-800 hover:text-black" onClick={() => setOpen(false)}>
+                    Depressie Behandeling
                   </Link>
                   <Link href="/ons-team" className="text-lg text-gray-800 hover:text-black" onClick={() => setOpen(false)}>
                     Over ons
