@@ -9,6 +9,7 @@ import { FaBars } from "react-icons/fa";
 
 const NavBar = () => {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  const [open, setOpen] = useState(false);
 
   const handleMouseEnter = (linkName: string) => {
     setHoveredLink(linkName);
@@ -78,25 +79,36 @@ const NavBar = () => {
           </Link>
           {/* Burger Menu voor Mobile */}
           <div className="md:hidden">
-            <Sheet>
-              <SheetTrigger>
-                <FaBars size={24} />
+            <Sheet open={open} onOpenChange={setOpen}>
+              <SheetTrigger asChild>
+              <Button variant="ghost" onClick={() => setOpen(true)}>
+                <FaBars size={36} />
+              </Button>
               </SheetTrigger>
               <SheetContent side="left">
                 <SheetHeader>
                   <SheetTitle>Menu</SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-4 mt-8">
-                  <Link href="/behandelingen" className="text-lg text-gray-800 hover:text-black">
+                  <Link href="/behandelingen" className="text-lg text-gray-800 hover:text-black" onClick={() => setOpen(false)}>
                     Wat bieden wij
                   </Link>
-                  <Link href="/ons-team" className="text-lg text-gray-800 hover:text-black">
+                  <Link href="/ons-team" className="text-lg text-gray-800 hover:text-black" onClick={() => setOpen(false)}>
                     Over ons
                   </Link>
-                  <Link href="/afspraak-maken" className="text-lg text-gray-800 hover:text-black">
+                  <Link href="/onze-werkwijze" className="text-lg text-gray-800 hover:text-black" onClick={() => setOpen(false)}>
+                    Onze-werkwijze
+                  </Link>
+                  <Link href="/neurofeedback" className="text-lg text-gray-800 hover:text-black" onClick={() => setOpen(false)}>
+                    Neurofeedback
+                  </Link>
+                  <Link href="/eeg-scan" className="text-lg text-gray-800 hover:text-black" onClick={() => setOpen(false)}>
+                    EEG-scan
+                  </Link>
+                  <Link href="/afspraak-maken" className="text-lg text-gray-800 hover:text-black" onClick={() => setOpen(false)}>
                     Ik ben op zoek naar hulp
                   </Link>
-                  <Link href="/vestigingen" className="text-lg text-gray-800 hover:text-black">
+                  <Link href="/vestigingen" className="text-lg text-gray-800 hover:text-black" onClick={() => setOpen(false)}>
                     Locaties
                   </Link>
                   <Link href="/afspraak-maken">

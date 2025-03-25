@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import Hero from "@/components/Hero";
 import InfoCards from "@/components/InfoCards";
 import Locations from "@/components/Locations";
@@ -111,10 +112,9 @@ export default function Home() {
 </div>
     
     {/* Scientific Research Section */}
-    <div className="container w-full max-w-7xl mx-auto"></div>
-    <div className="container max-w-7xl mx-auto p-8">
-      <div className="flex flex-col md:flex-row gap-8 items-center">
-        <div className="md:w-2/3">
+    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
+      <div className="w-full flex flex-col md:flex-row gap-8 items-center">
+        <div className="w-full md:w-2/3">
           <h2 className="text-3xl md:text-4xl font-semibold mb-5">Wetenschappelijk Onderzoek en Effectiviteit</h2>
           <p className="mb-4 text-base md:text-lg">
             rTMS is geen experimentele behandeling meer, maar een wetenschappelijk onderbouwde therapie met 
@@ -139,7 +139,7 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className="md:w-1/3">
+        <div className="w-full md:w-1/3">
           <Image 
             src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=400&h=500&auto=format&fit=crop" 
             alt="Wetenschappelijk onderzoek naar rTMS effectiviteit" 
@@ -154,13 +154,12 @@ export default function Home() {
     </div>
     
     {/* Different rTMS Techniques */}
-    <div className="container max-w-7xl mx-auto"></div>
-    <div className="container max-w-7xl mx-auto p-8">
+    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
       <h2 className="text-3xl md:text-4xl font-semibold mb-5">Verschillende rTMS Technieken</h2>
       
       <div className="mb-8 overflow-hidden rounded-2xl">
         <Image 
-          src="https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=1000&h=300&auto=format&fit=crop" 
+          src="https://images.unsplash.com/photo-1559757175-5700dde675bc?q=100&w=1000&h=300&auto=format&fit=crop" 
           alt="rTMS behandeltechnieken" 
           width={1000} 
           height={300}
@@ -174,33 +173,33 @@ export default function Home() {
         Er zijn verschillende varianten van rTMS beschikbaar, elk met specifieke toepassingen en voordelen:
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+        <div className="bg-green-950 p-6 rounded-lg shadow-sm">
           <h3 className="text-xl md:text-2xl font-semibold mb-2 text-[#7ed957]">Hoogfrequente rTMS</h3>
-          <p className="text-base md:text-lg">
+          <p className="text-white text-base md:text-lg">
             Stimuleert hersenactiviteit met frequenties van 5-20 Hz. Wordt voornamelijk gebruikt bij depressie
             om de activiteit in de linker prefrontale cortex te verhogen. Deze techniek heeft een exciterend effect
             op de hersenen en kan helpen bij het verhogen van de activiteit in onderactieve hersengebieden.
           </p>
         </div>
-        <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+        <div className="bg-green-950 p-6 rounded-lg shadow-sm">
           <h3 className="text-xl md:text-2xl font-semibold mb-2 text-[#7ed957]">Laagfrequente rTMS</h3>
-          <p className="text-base md:text-lg">
+          <p className="text-white text-base md:text-lg">
             Gebruikt frequenties van 1 Hz of lager om hersenactiviteit te verminderen. Deze techniek wordt 
             vaak toegepast bij angststoornissen, PTSS en tinnitus om overactieve hersengebieden te kalmeren. 
             Het heeft een remmend effect op de neurale activiteit.
           </p>
         </div>
-        <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+        <div className="bg-green-950 p-6 rounded-lg shadow-sm">
           <h3 className="text-xl md:text-2xl font-semibold mb-2 text-[#7ed957]">Theta Burst Stimulatie (TBS)</h3>
-          <p className="text-base md:text-lg">
+          <p className="text-white text-base md:text-lg">
             Een nieuwere vorm van rTMS die kortere behandeltijden mogelijk maakt (vaak slechts enkele minuten 
             per sessie in plaats van 30-40 minuten). TBS gebruikt korte bursts van hoogfrequente stimulatie en 
             kan zowel exciterend (iTBS) als inhiberend (cTBS) werken, afhankelijk van het protocol.
           </p>
         </div>
-        <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+        <div className="bg-green-950 p-6 rounded-lg shadow-sm">
           <h3 className="text-xl md:text-2xl font-semibold mb-2 text-[#7ed957]">Deep TMS</h3>
-          <p className="text-base md:text-lg">
+          <p className="text-white text-base md:text-lg">
             Gebruikt een speciaal ontworpen H-spoel die diepere hersengebieden kan bereiken dan standaard rTMS. 
             Deze techniek is FDA-goedgekeurd voor zowel depressie als OCD en kan effectief zijn voor patiënten 
             die niet reageren op conventionele rTMS.
@@ -208,77 +207,100 @@ export default function Home() {
         </div>
       </div>
     </div>
-    
+
     {/* rTMS and Medication */}
-    <div className="container max-w-7xl mx-auto"></div>
-    <div className="container max-w-7xl mx-auto p-8">
-      <h2 className="text-3xl md:text-4xl font-semibold mb-5">rTMS en Medicatie</h2>
-      <div className="flex flex-col md:flex-row gap-8 items-start">
-        <div className="md:w-2/3">
-          <p className="mb-4 text-base md:text-lg">
-            Een belangrijke vraag die veel patiënten hebben, is hoe rTMS zich verhoudt tot medicatie voor psychische 
-            aandoeningen. Hier zijn enkele belangrijke punten om te overwegen:
-          </p>
-          <ul className="list-disc pl-5 space-y-2 text-base md:text-lg">
-            <li>
-              <strong>Combinatietherapie:</strong> rTMS sluit het gebruik van medicatie niet uit. In feite kunnen 
-              beide behandelingen vaak synergistisch werken. Veel patiënten ondergaan rTMS terwijl ze hun medicatie 
-              blijven gebruiken.
-            </li>
-            <li>
-              <strong>Alternatief voor medicatie:</strong> Voor patiënten die ernstige bijwerkingen ervaren van 
-              medicatie of bij wie medicatie niet effectief is gebleken, kan rTMS een waardevol alternatief zijn.
-            </li>
-            <li>
-              <strong>Medicatiereductie:</strong> Sommige patiënten kunnen, in overleg met hun arts, hun medicatie 
-              geleidelijk afbouwen na succesvolle rTMS-behandeling. Dit moet echter altijd onder medisch toezicht gebeuren.
-            </li>
-            <li>
-              <strong>Geen systemische bijwerkingen:</strong> Een groot voordeel van rTMS ten opzichte van medicatie 
-              is het gebrek aan systemische bijwerkingen zoals gewichtstoename, seksuele disfunctie of maag-darmklachten.
-            </li>
-          </ul>
-          
-          <div className="mt-6 rounded-xl overflow-hidden">
-            <Image 
-              src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=600&h=300&auto=format&fit=crop" 
-              alt="Vergelijking rTMS en medicatie" 
-              width={600} 
-              height={300}
-              className="w-full max-h-[300px] object-cover"
-              unoptimized
-              quality={100}
-            />
-          </div>
-        </div>
-        <div className="md:w-1/3">
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl md:text-2xl font-semibold mb-3 text-[#7ed957]">Belangrijk om te weten</h3>
-            <p className="text-base md:text-lg">
-              Stop nooit plotseling met uw medicatie zonder overleg met uw behandelend arts. Ook als u start met 
-              rTMS-behandeling, is het belangrijk om uw medicatiegebruik te bespreken met uw arts en geen 
-              wijzigingen aan te brengen zonder professioneel advies.
+    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
+      <h2 className="text-3xl md:text-4xl font-semibold mb-8">rTMS en Medicatie</h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Left Column */}
+        <div className="md:col-span-2 flex flex-col justify-between">
+          <div>
+            <p className="mb-4 text-base md:text-lg">
+              Een belangrijke vraag die veel patiënten hebben, is hoe rTMS zich verhoudt tot medicatie voor psychische 
+              aandoeningen. Hier zijn enkele belangrijke punten om te overwegen:
             </p>
+            <ul className="list-disc pl-5 space-y-2 text-base md:text-lg mb-8">
+              <li>
+                <strong>Combinatietherapie:</strong> rTMS sluit het gebruik van medicatie niet uit. In feite kunnen 
+                beide behandelingen vaak synergistisch werken. Veel patiënten ondergaan rTMS terwijl ze hun medicatie 
+                blijven gebruiken.
+              </li>
+              <li>
+                <strong>Alternatief voor medicatie:</strong> Voor patiënten die ernstige bijwerkingen ervaren van 
+                medicatie of bij wie medicatie niet effectief is gebleken, kan rTMS een waardevol alternatief zijn.
+              </li>
+              <li>
+                <strong>Medicatiereductie:</strong> Sommige patiënten kunnen, in overleg met hun arts, hun medicatie 
+                geleidelijk afbouwen na succesvolle rTMS-behandeling. Dit moet echter altijd onder medisch toezicht gebeuren.
+              </li>
+              <li>
+                <strong>Geen systemische bijwerkingen:</strong> Een groot voordeel van rTMS ten opzichte van medicatie 
+                is het gebrek aan systemische bijwerkingen zoals gewichtstoename, seksuele disfunctie of maag-darmklachten.
+              </li>
+              {/* <li>
+                <strong>Complementaire aanpak:</strong> Voor veel patiënten blijkt de combinatie van rTMS met therapie 
+                of medicatie de meest effectieve aanpak, waarbij elke behandelmodaliteit verschillende aspecten van 
+                de aandoening aanpakt.
+              </li>
+              <li>
+                <strong>Wetenschappelijk onderbouwd:</strong> De werkzaamheid van rTMS naast of in plaats van medicatie
+                is in meerdere klinische studies aangetoond, met duidelijke voordelen voor patiënten die niet goed reageren
+                op traditionele behandelingen.
+              </li> */}
+            </ul>
           </div>
           
-          <div className="mt-6 rounded-xl overflow-hidden">
-            <Image 
-              src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=400&h=500&auto=format&fit=crop" 
-              alt="Professioneel medisch advies" 
-              width={400} 
-              height={500}
-              className="w-full max-h-[400px] object-cover"
-              unoptimized
-              quality={100}
-            />
+          <Image 
+            src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=600&h=300&auto=format&fit=crop" 
+            alt="Vergelijking rTMS en medicatie" 
+            width={600} 
+            height={300}
+            className="w-full h-[300px] object-cover rounded-xl"
+            unoptimized
+            quality={100}
+          />
+        </div>
+    
+        {/* Right Column */}
+        <div className="flex flex-col justify-between">
+          <div>
+            <div className="bg-green-950 p-6 rounded-xl mb-8">
+              <h3 className="text-xl md:text-2xl font-semibold mb-3 text-[#7ed957]">
+                Belangrijk om te weten
+              </h3>
+              <p className="text-white text-base md:text-lg">
+                Stop nooit plotseling met uw medicatie zonder overleg met uw behandelend arts. Ook als u start met 
+                rTMS-behandeling, is het belangrijk om uw medicatiegebruik te bespreken met uw arts en geen 
+                wijzigingen aan te brengen zonder professioneel advies.
+              </p>
+            </div>
+            
+            {/* <div className="mb-8 text-base md:text-lg">
+              <h3 className="text-xl font-semibold mb-3">Overleg met uw behandelaar</h3>
+              <p>
+                De beslissing om rTMS als aanvulling op of vervanging van medicatie te gebruiken moet altijd in overleg met 
+                uw behandelend arts worden genomen. Bij de rTMS Kliniek werken we samen met uw huidige zorgverleners om 
+                de optimale behandelstrategie te bepalen.
+              </p>
+            </div> */}
           </div>
+          
+          <Image 
+            src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=400&h=500&auto=format&fit=crop" 
+            alt="Professioneel medisch advies" 
+            width={400} 
+            height={500}
+            className="w-full h-[300px] object-cover rounded-xl"
+            unoptimized
+            quality={100}
+          />
         </div>
       </div>
     </div>
     
     {/* Practical Information */}
-    <div className="container max-w-7xl mx-auto"></div>
-    <div className="container max-w-7xl mx-auto p-8">
+    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
       <h2 className="text-3xl md:text-4xl font-semibold mb-5">Praktische Informatie over rTMS Behandelingen</h2>
       
       <div className="mb-8 relative rounded-3xl overflow-hidden">
@@ -300,7 +322,7 @@ export default function Home() {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="flex flex-col md:flex-row gap-4 items-start">
+        <div className="flex flex-col md:flex-row gap-4 items-start bg-green-950 rounded-3xl p-6">
           <div className="md:w-1/4 flex justify-center">
             <div className="h-16 w-16 md:h-20 md:w-20 rounded-full bg-[#7ed957] flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-white">
@@ -309,8 +331,8 @@ export default function Home() {
             </div>
           </div>
           <div className="md:w-3/4">
-            <h3 className="text-xl md:text-2xl font-semibold mb-3">Duur en Frequentie</h3>
-            <p className="text-base md:text-lg">
+            <h3 className="text-white text-xl md:text-2xl font-semibold mb-3">Duur en Frequentie</h3>
+            <p className="text-white text-base md:text-lg">
               Een standaard rTMS-behandeltraject bestaat uit 20-30 sessies, verdeeld over 4-6 weken (meestal 
               5 sessies per week). Elke sessie duurt ongeveer 20-40 minuten, afhankelijk van het protocol. 
               Voor sommige patiënten kunnen onderhoudsbehandelingen nodig zijn na het initiële traject.
@@ -318,7 +340,7 @@ export default function Home() {
           </div>
         </div>
         
-        <div className="flex flex-col md:flex-row gap-4 items-start">
+        <div className="flex flex-col md:flex-row gap-4 items-start bg-green-950 rounded-3xl p-6">
           <div className="md:w-1/4 flex justify-center">
             <div className="h-16 w-16 md:h-20 md:w-20 rounded-full bg-[#7ed957] flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-white">
@@ -327,8 +349,8 @@ export default function Home() {
             </div>
           </div>
           <div className="md:w-3/4">
-            <h3 className="text-xl md:text-2xl font-semibold mb-3">Wat te Verwachten Tijdens een Sessie</h3>
-            <p className="text-base md:text-lg">
+            <h3 className="text-white text-xl md:text-2xl font-semibold mb-3">Wat te Verwachten Tijdens een Sessie</h3>
+            <p className="text-white text-base md:text-lg">
               Tijdens een rTMS-sessie zit u comfortabel in een stoel. De behandelaar plaatst de magnetische spoel 
               op uw hoofd. U hoort tijdens de stimulatie een klikkend geluid en voelt mogelijk een licht tikkend 
               gevoel. U blijft volledig bij bewustzijn en kunt direct na de behandeling uw dagelijkse activiteiten hervatten.
@@ -337,75 +359,11 @@ export default function Home() {
         </div>
       </div>
     </div>
-    
-    {/* FAQ section */}
-    <div className="container max-w-7xl mx-auto"></div>
-    <div className="container max-w-7xl mx-auto p-8">
-      <div className="flex flex-col md:flex-row gap-8 items-start">
-        <div className="md:w-2/3">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-5">Veelgestelde Vragen over rTMS</h2>
-          
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2">Is rTMS pijnlijk?</h3>
-              <p className="text-base md:text-lg">
-                rTMS is over het algemeen niet pijnlijk. De meeste patiënten beschrijven de sensatie als een licht 
-                tikkend of kloppend gevoel op de hoofdhuid. Sommigen ervaren tijdens de eerste sessies enig ongemak, 
-                maar dit vermindert meestal naarmate men aan de behandeling went.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2">Hoe lang duurt het voordat rTMS werkt?</h3>
-              <p className="text-base md:text-lg">
-                Het effect van rTMS is cumulatief en bouwt zich op in de loop van de behandeling. Sommige patiënten 
-                merken al na enkele sessies verbetering, maar voor de meesten wordt significante verbetering pas 
-                zichtbaar na 2-3 weken behandeling. Het volledige effect wordt vaak pas bereikt na afronding van 
-                het gehele behandeltraject.
-              </p>
-            </div>
 
-            <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2">Is rTMS vergoed door zorgverzekeraars?</h3>
-              <p className="text-base md:text-lg">
-                De vergoeding van rTMS-behandeling varieert per zorgverzekeraar en type polis. In Nederland wordt rTMS 
-                voor therapieresistente depressie inmiddels door de meeste zorgverzekeraars vergoed vanuit de basisverzekering, 
-                mits er aan bepaalde voorwaarden is voldaan. Voor andere aandoeningen kan vergoeding verschillen. 
-                We raden aan om vóór de start van de behandeling contact op te nemen met uw zorgverzekeraar om uw specifieke 
-                dekking te bespreken. Onze administratie kan u hierbij ondersteunen.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="md:w-1/3">
-          <div className="sticky top-20">
-            <Image 
-              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=350&h=500&auto=format&fit=crop" 
-              alt="rTMS behandeling informatie" 
-              width={350} 
-              height={500}
-              className="rounded-2xl shadow-lg mx-auto max-h-[500px] object-cover"
-              unoptimized
-              quality={100}
-            />
-            <div className="mt-4 bg-green-950 p-6 rounded-xl text-white">
-              <h3 className="font-bold text-xl mb-2">Heeft u nog andere vragen?</h3>
-              <p className="mb-4 text-base md:text-lg">Neem contact met ons op voor meer informatie over rTMS behandelingen.</p>
-              <Link href="/contact">
-                <span className="inline-block px-4 py-2 bg-white text-green-900 rounded-lg font-semibold hover:bg-gray-200 transition">
-                  Contact opnemen
-                </span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <FaqSection />
     
     {/* rTMS at our clinic */}
-    <div className="container max-w-7xl mx-auto"></div>
-    <div className="container max-w-7xl mx-auto p-8">
+    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
       <h2 className="text-3xl md:text-4xl font-semibold mb-5">rTMS bij rTMS Kliniek</h2>
       
       <div className="grid grid-cols-3 gap-4 mb-8">
@@ -439,26 +397,26 @@ export default function Home() {
       </p>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5">
-        <div className="bg-gray-50 p-5 rounded-lg shadow-sm">
+        <div className="bg-gray-50 p-5 rounded-lg shadow-sm bg-green-950 p-6 rounded-3xl">
           <h3 className="text-lg md:text-xl font-semibold mb-2 text-[#7ed957]">Gepersonaliseerde Behandelplannen</h3>
-          <p className="text-base md:text-lg">
+          <p className="text-white text-base md:text-lg">
             We stemmen elke behandeling af op uw specifieke situatie, met individuele targeting en protocollen 
             op basis van de nieuwste wetenschappelijke inzichten.
           </p>
         </div>
         
-        <div className="bg-gray-50 p-5 rounded-lg shadow-sm">
+        <div className="bg-gray-50 p-5 rounded-lg shadow-sm bg-green-950 p-6 rounded-3xl">
           <h3 className="text-lg md:text-xl font-semibold mb-2 text-[#7ed957]">Ervaren Specialisten</h3>
-          <p className="text-base md:text-lg">
+          <p className="text-white text-base md:text-lg">
             Ons team bestaat uit ervaren psychiaters, neurologen en rTMS-specialisten met jarenlange expertise 
             in neuromodulatie. Elke behandeling wordt uitgevoerd door gecertificeerde professionals die regelmatig 
             bijscholing volgen over de nieuwste ontwikkelingen op het gebied van rTMS.
           </p>
         </div>
 
-        <div className="bg-gray-50 p-5 rounded-lg shadow-sm">
+        <div className="bg-gray-50 p-5 rounded-lg shadow-sm bg-green-950 p-6 rounded-3xl">
           <h3 className="text-lg md:text-xl font-semibold mb-2 text-[#7ed957]">Geavanceerde Technologie</h3>
-          <p className="text-base md:text-lg">
+          <p className="text-white text-base md:text-lg">
             Wij werken met de meest moderne rTMS-apparatuur en gebruiken geavanceerde neuronavigatie voor nauwkeurige 
             targeting. Onze kliniek beschikt over verschillende soorten spoelen, waaronder figure-8 en H-spoelen, om 
             optimale stimulatie voor diverse aandoeningen mogelijk te maken.
@@ -499,33 +457,32 @@ export default function Home() {
     </div>
     
     {/* Treatment Success Statistics */}
-    <div className="container max-w-7xl mx-auto"></div>
-    <div className="container max-w-7xl mx-auto p-8">
+    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
       <h2 className="text-3xl md:text-4xl font-semibold mb-8">Behandelresultaten en Statistieken</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <div className="text-4xl md:text-5xl font-bold text-green-900 mb-2">70%</div>
+        <div className="p-6 rounded-3xl bg-green-950 text-white">
+          <div className="text-4xl md:text-5xl font-bold text-[#7ed957] mb-2">70%</div>
           <h3 className="text-xl font-semibold mb-2">Respons bij Depressie</h3>
-          <p className="text-gray-600">Van de patiënten ervaart significante verbetering na een volledige behandeling</p>
+          <p>Van de patiënten ervaart significante verbetering na een volledige behandeling</p>
         </div>
         
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <div className="text-4xl md:text-5xl font-bold text-green-900 mb-2">65%</div>
+        <div className="p-6 rounded-3xl bg-green-950 text-white">
+          <div className="text-4xl md:text-5xl font-bold text-[#7ed957] mb-2">65%</div>
           <h3 className="text-xl font-semibold mb-2">Angstreductie</h3>
-          <p className="text-gray-600">Van de patiënten met angststoornissen ziet vermindering van klachten</p>
+          <p>Van de patiënten met angststoornissen ziet vermindering van klachten</p>
         </div>
         
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <div className="text-4xl md:text-5xl font-bold text-green-900 mb-2">4.8</div>
+        <div className="p-6 rounded-3xl bg-green-950 text-white">
+          <div className="text-4xl md:text-5xl font-bold text-[#7ed957] mb-2">4.8</div>
           <h3 className="text-xl font-semibold mb-2">Patiënttevredenheid</h3>
-          <p className="text-gray-600">Gemiddelde waardering van onze patiënten (schaal 1-5)</p>
+          <p>Gemiddelde waardering van onze patiënten (schaal 1-5)</p>
         </div>
         
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <div className="text-4xl md:text-5xl font-bold text-green-900 mb-2">12+</div>
+        <div className="p-6 rounded-3xl bg-green-950 text-white">
+          <div className="text-4xl md:text-5xl font-bold text-[#7ed957] mb-2">12+</div>
           <h3 className="text-xl font-semibold mb-2">Jaar Ervaring</h3>
-          <p className="text-gray-600">Met rTMS behandelingen en duizenden succesvol behandelde patiënten</p>
+          <p>Met rTMS behandelingen en duizenden succesvol behandelde patiënten</p>
         </div>
       </div>
       
@@ -539,7 +496,7 @@ export default function Home() {
     </div>
     
     {/* Treatment Process Timeline */}
-    <div className="container max-w-7xl mx-auto p-8">
+    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
       <h2 className="text-3xl md:text-4xl font-semibold mb-8 text-center">Uw rTMS Behandeltraject</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -590,7 +547,7 @@ export default function Home() {
     </div>
     
     {/* CTA banner with adjusted container */}
-    <div className="container max-w-7xl mx-auto">
+    <div className="w-[90%] mt-8 mx-auto rounded-3xl">
       <div className="py-16 bg-green-950 my-12 w-full mx-auto rounded-[4rem]">
         <div className="container mx-auto text-center px-4">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">Klaar om de volgende stap te zetten?</h2>
