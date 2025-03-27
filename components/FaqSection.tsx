@@ -31,7 +31,7 @@ const FaqSection = () => {
   ];
 
   return (
-    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
+    <div className="w-[90%] mx-auto mt-8 md:mt-40 rounded-3xl">
       <h2 className="text-3xl md:text-4xl font-semibold mb-5">Veelgestelde Vragen over rTMS</h2>
       
       <div className="flex flex-col md:flex-row gap-8">

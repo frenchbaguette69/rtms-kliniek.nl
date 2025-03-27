@@ -112,7 +112,7 @@ export default function Home() {
 </div>
     
     {/* Scientific Research Section */}
-    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
+    <div className="w-[90%] mx-auto mt-16 md:mt-32 rounded-3xl">
       <div className="w-full flex flex-col md:flex-row gap-8 items-center">
         <div className="w-full md:w-2/3">
           <h2 className="text-3xl md:text-4xl font-semibold mb-5">Wetenschappelijk Onderzoek en Effectiviteit</h2>
@@ -154,7 +154,7 @@ export default function Home() {
     </div>
     
     {/* Different rTMS Techniques */}
-    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
+    <div className="w-[90%] mx-auto mt-16 md:mt-32 rounded-3xl">
       <h2 className="text-3xl md:text-4xl font-semibold mb-5">Verschillende rTMS Technieken</h2>
       
       <div className="mb-8 overflow-hidden rounded-2xl">
@@ -209,7 +209,7 @@ export default function Home() {
     </div>
 
     {/* rTMS and Medication */}
-    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
+    <div className="w-[90%] mx-auto mt-16 md:mt-32 rounded-3xl">
       <h2 className="text-3xl md:text-4xl font-semibold mb-8">rTMS en Medicatie</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -238,16 +238,6 @@ export default function Home() {
                 <strong>Geen systemische bijwerkingen:</strong> Een groot voordeel van rTMS ten opzichte van medicatie 
                 is het gebrek aan systemische bijwerkingen zoals gewichtstoename, seksuele disfunctie of maag-darmklachten.
               </li>
-              {/* <li>
-                <strong>Complementaire aanpak:</strong> Voor veel patiënten blijkt de combinatie van rTMS met therapie 
-                of medicatie de meest effectieve aanpak, waarbij elke behandelmodaliteit verschillende aspecten van 
-                de aandoening aanpakt.
-              </li>
-              <li>
-                <strong>Wetenschappelijk onderbouwd:</strong> De werkzaamheid van rTMS naast of in plaats van medicatie
-                is in meerdere klinische studies aangetoond, met duidelijke voordelen voor patiënten die niet goed reageren
-                op traditionele behandelingen.
-              </li> */}
             </ul>
           </div>
           
@@ -275,15 +265,6 @@ export default function Home() {
                 wijzigingen aan te brengen zonder professioneel advies.
               </p>
             </div>
-            
-            {/* <div className="mb-8 text-base md:text-lg">
-              <h3 className="text-xl font-semibold mb-3">Overleg met uw behandelaar</h3>
-              <p>
-                De beslissing om rTMS als aanvulling op of vervanging van medicatie te gebruiken moet altijd in overleg met 
-                uw behandelend arts worden genomen. Bij de rTMS Kliniek werken we samen met uw huidige zorgverleners om 
-                de optimale behandelstrategie te bepalen.
-              </p>
-            </div> */}
           </div>
           
           <Image 
@@ -300,7 +281,7 @@ export default function Home() {
     </div>
     
     {/* Practical Information */}
-    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
+    <div className="w-[90%] mx-auto mt-16 md:mt-32 rounded-3xl">
       <h2 className="text-3xl md:text-4xl font-semibold mb-5">Praktische Informatie over rTMS Behandelingen</h2>
       
       <div className="mb-8 relative rounded-3xl overflow-hidden">
@@ -363,7 +344,7 @@ export default function Home() {
     <FaqSection />
     
     {/* rTMS at our clinic */}
-    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
+    <div className="w-[90%] mx-auto mt-16 md:mt-32 rounded-3xl">
       <h2 className="text-3xl md:text-4xl font-semibold mb-5">rTMS bij rTMS Kliniek</h2>
       
       <div className="grid grid-cols-3 gap-4 mb-8">
@@ -425,7 +406,7 @@ export default function Home() {
       </div>
       
       {/* Testimonial */}
-      <div className="mt-12 bg-gray-50 rounded-3xl overflow-hidden">
+      <div className="mt-12 md:mt-32 bg-gray-50 rounded-3xl overflow-hidden">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/3">
             <Image 
@@ -457,7 +438,7 @@ export default function Home() {
     </div>
     
     {/* Treatment Success Statistics */}
-    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
+    <div className="w-[90%] mx-auto mt-16 md:mt-32 rounded-3xl">
       <h2 className="text-3xl md:text-4xl font-semibold mb-8">Behandelresultaten en Statistieken</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -496,7 +477,7 @@ export default function Home() {
     </div>
     
     {/* Treatment Process Timeline */}
-    <div className="w-[90%] mx-auto mt-8 rounded-3xl">
+    <div className="w-[90%] mx-auto mt-16 md:mt-32 rounded-3xl">
       <h2 className="text-3xl md:text-4xl font-semibold mb-8 text-center">Uw rTMS Behandeltraject</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -547,7 +528,7 @@ export default function Home() {
     </div>
     
     {/* CTA banner with adjusted container */}
-    <div className="w-[90%] mt-8 mx-auto rounded-3xl">
+    <div className="w-[90%] mt-16 mx-auto md:mt-32 rounded-3xl">
       <div className="py-16 bg-green-950 my-12 w-full mx-auto rounded-[4rem]">
         <div className="container mx-auto text-center px-4">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">Klaar om de volgende stap te zetten?</h2>
