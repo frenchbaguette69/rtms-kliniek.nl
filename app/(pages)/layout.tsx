@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "rTMS behandeling | rTMS kliniek",
+  title: "rTMS Behandeling bij Depressie en Angst | rTMS Kliniek Nederland",
   description:
-    "Repetitieve Transcraniële Magnetische Stimulatie (rTMS) is een rTMS behandeling bij depressie, psychische problemen op bipolaire stoornis. Ervaart u ook stemmingswisselingen? Boek een behandeling bij rTMS kliniek.",
+    "Effectieve rTMS behandeling voor depressie, angst en OCD. Geen medicatie nodig, wetenschappelijk bewezen. Plan nu een intake bij onze gespecialiseerde kliniek.",
 };
 
 export default function RootLayout({
