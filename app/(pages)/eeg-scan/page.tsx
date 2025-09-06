@@ -6,15 +6,15 @@ import { Button } from "@/components/ui/button";
 import RTMSInfo from "@/components/RTMSInfo";
 
 export const metadata: Metadata = {
-  title: "EEG-Scan | Gedetailleerde Hersenanalyse voor Nauwkeurige Behandeling | rTMS Kliniek",
+  title: "EEG-Scan | Gedetailleerde Hersenanalyse voor Nauwkeurige Behandeling | rtms behandeling",
   description:
     "Een EEG-scan (elektro-encefalogram) brengt uw hersenactiviteit in kaart voor een gepersonaliseerde behandeling van depressie, angst, ADHD en meer. Ontdek hoe onze geavanceerde EEG-analyse de basis vormt voor effectieve rTMS en neurofeedback behandelingen.",
   openGraph: {
-    title: "EEG-Scan | Gedetailleerde Hersenanalyse voor Nauwkeurige Behandeling | rTMS Kliniek",
+    title: "EEG-Scan | Gedetailleerde Hersenanalyse voor Nauwkeurige Behandeling | rtms behandeling",
     description: 
       "Een EEG-scan geeft inzicht in uw unieke hersenactiviteit en vormt de basis voor gepersonaliseerde behandelingen zoals rTMS en neurofeedback bij psychische klachten.",
-    url: "https://rtms-kliniek.nl/eeg-scan",
-    siteName: "rTMS kliniek",
+    url: "https://rtms-behandeling.nl/eeg-scan",
+    siteName: "rtms behandeling",
     images: [
       {
         url: "https://images.unsplash.com/photo-1583911860205-72f8ac8ddcbe",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "EEG-Scan | Gedetailleerde Hersenanalyse voor Nauwkeurige Behandeling | rTMS Kliniek",
+    title: "EEG-Scan | Gedetailleerde Hersenanalyse voor Nauwkeurige Behandeling | rtms behandeling",
     description:
       "Een EEG-scan brengt uw hersenactiviteit in kaart voor gerichte behandeling van psychische klachten. De basis voor effectieve rTMS en neurofeedback therapie.",
     images: ["https://images.unsplash.com/photo-1583911860205-72f8ac8ddcbe"],
@@ -42,7 +42,7 @@ const EEGScanPage = () => {
     "@type": "MedicalProcedure",
     "name": "EEG-Scan",
     "alternateName": "Elektro-encefalografie",
-    "url": "https://rtms-kliniek.nl/eeg-scan",
+    "url": "https://rtms-behandeling.nl/eeg-scan",
     "image": "https://images.unsplash.com/photo-1583911860205-72f8ac8ddcbe",
     "description": "Een EEG-scan (elektro-encefalogram) is een niet-invasieve procedure die elektrische activiteit in de hersenen meet via elektrodes die op de hoofdhuid worden geplaatst. Deze gedetailleerde hersenanalyse wordt gebruikt als diagnostisch hulpmiddel en om gepersonaliseerde behandelplannen op te stellen voor rTMS en neurofeedback.",
     "medicalSpecialty": "Neurologie, Psychiatrie",
@@ -54,9 +54,9 @@ const EEGScanPage = () => {
     "status": "EventScheduled",
     "provider": {
       "@type": "MedicalOrganization",
-      "name": "rTMS Kliniek",
-      "url": "https://rtms-kliniek.nl",
-      "logo": "https://rtms-kliniek.nl/logo.png",
+      "name": "rtms behandeling",
+      "url": "https://rtms-behandeling.nl",
+      "logo": "https://rtms-behandeling.nl/logo.png",
       "address": [
         {
           "@type": "PostalAddress",
@@ -170,11 +170,11 @@ const EEGScanPage = () => {
         <div className="mt-5 text-center">
           <p>
             Een EEG-scan brengt de elektrische activiteit van uw hersenen in kaart en biedt waardevolle 
-            inzichten voor een nauwkeurige diagnose en een gepersonaliseerd behandelplan. Bij rTMS Kliniek 
+            inzichten voor een nauwkeurige diagnose en een gepersonaliseerd behandelplan. Bij rtms behandeling 
             gebruiken we geavanceerde EEG-technologie als basis voor onze op maat gemaakte rTMS en 
             neurofeedback behandelingen, voor optimale resultaten.
           </p>
-          <Link href="/contact">
+          <Link href="/afspraak-maken">
             <Button className="mt-5">Afspraak maken</Button>
           </Link>
         </div>
@@ -203,7 +203,7 @@ const EEGScanPage = () => {
                 communiceren.
               </p>
               <p>
-                Bij rTMS Kliniek gebruiken we zowel standaard EEG als kwantitatieve EEG (qEEG) analyses. Een qEEG 
+                Bij rtms behandeling gebruiken we zowel standaard EEG als kwantitatieve EEG (qEEG) analyses. Een qEEG 
                 verwerkt de ruwe EEG-gegevens met geavanceerde software en vergelijkt deze met normatieve databases, 
                 waardoor we een gedetailleerd beeld krijgen van hoe uw hersenactiviteit afwijkt van het gemiddelde. 
                 Dit vormt de basis voor een gepersonaliseerde behandelstrategie.
@@ -436,7 +436,7 @@ const EEGScanPage = () => {
         
         <div className="bg-[#7ed957] p-16 rounded-3xl text-white flex-col justify-between items-center text-center">
           <h3 className="font-semibold text-3xl md:text-5xl">Klaar om uw hersenactiviteit in kaart te brengen?</h3>
-          <Link href="/contact">
+          <Link href="/afspraak-maken">
             <Button className="mt-5">EEG-scan afspraak maken</Button>
           </Link>
         </div>  

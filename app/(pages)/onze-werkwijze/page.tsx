@@ -6,15 +6,15 @@ import { Button } from "@/components/ui/button";
 import RTMSInfo from "@/components/RTMSInfo";
 
 export const metadata: Metadata = {
-  title: "Onze Werkwijze | rTMS Behandeling voor Depressie en Angst | rTMS Kliniek",
+  title: "Onze Werkwijze | rTMS Behandeling voor Depressie en Angst | rtms behandeling",
   description:
     "Ontdek de stapsgewijze aanpak van onze rTMS behandelingen voor depressie, angst en andere aandoeningen. Van intake tot nazorg bieden wij persoonlijke begeleiding met geavanceerde rTMS technologie.",
   openGraph: {
-    title: "Onze Werkwijze | rTMS Behandeling voor Depressie en Angst | rTMS Kliniek",
+    title: "Onze Werkwijze | rTMS Behandeling voor Depressie en Angst | rtms behandeling",
     description: 
       "Ontdek hoe onze rTMS behandelingen verlopen: een persoonlijke intake, een op maat gemaakt behandelplan, en zorgvuldige begeleiding tijdens het hele traject.",
-    url: "https://rtms-kliniek.nl/onze-werkwijze",
-    siteName: "rTMS kliniek",
+    url: "https://rtms-behandeling.nl/onze-werkwijze",
+    siteName: "rtms behandeling",
     images: [
       {
         url: "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Onze Werkwijze | rTMS Behandeling voor Depressie en Angst | rTMS Kliniek",
+    title: "Onze Werkwijze | rTMS Behandeling voor Depressie en Angst | rtms behandeling",
     description:
       "Ontdek de stapsgewijze aanpak van onze rTMS behandelingen en hoe we u van intake tot nazorg persoonlijk begeleiden.",
     images: ["https://images.unsplash.com/photo-1576091160550-2173dba999ef"],
@@ -41,7 +41,7 @@ const OnzeWerkwijzePage = () => {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Onze Werkwijze - rTMS Behandelingen",
-    "url": "https://rtms-kliniek.nl/onze-werkwijze",
+    "url": "https://rtms-behandeling.nl/onze-werkwijze",
     "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
     "description": "Gedetailleerde uitleg over hoe onze rTMS behandelingen verlopen: van de eerste intake en diagnose tot het behandeltraject en nazorg.",
     "about": {
@@ -54,9 +54,9 @@ const OnzeWerkwijzePage = () => {
     },
     "provider": {
       "@type": "MedicalOrganization",
-      "name": "rTMS Kliniek",
-      "url": "https://rtms-kliniek.nl",
-      "logo": "https://rtms-kliniek.nl/logo.png",
+      "name": "rtms behandeling",
+      "url": "https://rtms-behandeling.nl",
+      "logo": "https://rtms-behandeling.nl/logo.png",
       "address": [
         {
           "@type": "PostalAddress",
@@ -81,31 +81,31 @@ const OnzeWerkwijzePage = () => {
         "@type": "HowToStep",
         "name": "Intake",
         "text": "Uitgebreide kennismaking en bespreking van uw klachten en medische geschiedenis",
-        "url": "https://rtms-kliniek.nl/onze-werkwijze#intake"
+        "url": "https://rtms-behandeling.nl/onze-werkwijze#intake"
       },
       {
         "@type": "HowToStep",
         "name": "Diagnose",
         "text": "Grondige evaluatie van uw situatie om te bepalen of rTMS behandeling geschikt is",
-        "url": "https://rtms-kliniek.nl/onze-werkwijze#diagnose"
+        "url": "https://rtms-behandeling.nl/onze-werkwijze#diagnose"
       },
       {
         "@type": "HowToStep",
         "name": "Behandelplan",
         "text": "Opstellen van een gepersonaliseerd behandelplan met frequentie en duur van de sessies",
-        "url": "https://rtms-kliniek.nl/onze-werkwijze#behandelplan"
+        "url": "https://rtms-behandeling.nl/onze-werkwijze#behandelplan"
       },
       {
         "@type": "HowToStep",
         "name": "Behandeling",
         "text": "Reeks van rTMS sessies volgens het behandelplan, inclusief regelmatige evaluaties",
-        "url": "https://rtms-kliniek.nl/onze-werkwijze#behandeling"
+        "url": "https://rtms-behandeling.nl/onze-werkwijze#behandeling"
       },
       {
         "@type": "HowToStep",
         "name": "Nazorg",
         "text": "Follow-up gesprekken en ondersteuning na afloop van de behandeling",
-        "url": "https://rtms-kliniek.nl/onze-werkwijze#nazorg"
+        "url": "https://rtms-behandeling.nl/onze-werkwijze#nazorg"
       }
     ]
   };
@@ -160,12 +160,12 @@ const OnzeWerkwijzePage = () => {
         
         <div className="mt-5 text-center">
           <p>
-            Bij rTMS Kliniek volgen we een zorgvuldig opgebouwd traject voor elke patiënt. 
+            Bij rtms behandeling volgen we een zorgvuldig opgebouwd traject voor elke patiënt. 
             Onze aanpak combineert wetenschappelijke precisie met persoonlijke aandacht, 
             waarbij uw welzijn en herstel centraal staan. Van de eerste kennismaking tot de 
             nazorg na uw behandeling, wij begeleiden u stap voor stap.
           </p>
-          <Link href="/contact">
+          <Link href="/afspraak-maken">
             <Button className="mt-5">Afspraak maken</Button>
           </Link>
         </div>
@@ -333,7 +333,7 @@ const OnzeWerkwijzePage = () => {
         
         <div className="bg-[#7ed957] p-16 rounded-3xl text-white flex-col justify-between items-center text-center">
           <h3 className="font-semibold text-3xl md:text-5xl">Klaar om uw rTMS behandeltraject te starten?</h3>
-          <Link href="/contact">
+          <Link href="/afspraak-maken">
             <Button className="mt-5">Afspraak inplannen</Button>
           </Link>
         </div>  

@@ -174,7 +174,7 @@ export default function FAQWithLinks() {
 
   return (
     <div className="container mx-auto p-8">
-      <h2 className="text-3xl font-semibold mb-5 mt-16">Veelgestelde Vragen over rTMS kliniek</h2>
+      <h2 className="text-3xl font-semibold mb-5 mt-16">Veelgestelde Vragen over rtms behandeling</h2>
       <p className="text-lg mb-12">Lees hier vragen die veelgesteld zijn rondom rTMS of onze kliniek. Vraag jij je af of dit vergoed wordt door de zorgverzekering. Bel ons en wij controleren het voor je. Toch eerst zelf info opdoen? bel uw zorgverzekering en refereer naar onze website </p>
       <div className="space-y-4">
         {faqs.map((faq, index) => (

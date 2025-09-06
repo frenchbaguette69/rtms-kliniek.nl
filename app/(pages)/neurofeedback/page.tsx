@@ -6,15 +6,15 @@ import { Button } from "@/components/ui/button";
 import RTMSInfo from "@/components/RTMSInfo";
 
 export const metadata: Metadata = {
-  title: "Neurofeedback Behandeling | Hersentraining voor Mentale Gezondheid | rTMS Kliniek",
+  title: "Neurofeedback Behandeling | Hersentraining voor Mentale Gezondheid | rtms behandeling",
   description:
     "Ontdek hoe neurofeedback uw hersenactiviteit kan optimaliseren voor de behandeling van ADHD, angst, depressie en slaapproblemen. Een niet-invasieve methode om uw hersenen te trainen voor betere mentale gezondheid.",
   openGraph: {
-    title: "Neurofeedback Behandeling | Hersentraining voor Mentale Gezondheid | rTMS Kliniek",
+    title: "Neurofeedback Behandeling | Hersentraining voor Mentale Gezondheid | rtms behandeling",
     description: 
       "Neurofeedback is een geavanceerde, niet-invasieve techniek die u helpt controle te krijgen over uw hersenactiviteit. Ideaal bij ADHD, angst, depressie en slaapproblemen.",
-    url: "https://rtms-kliniek.nl/neurofeedback",
-    siteName: "rTMS kliniek",
+    url: "https://rtms-behandeling.nl/neurofeedback",
+    siteName: "rtms behandeling",
     images: [
       {
         url: "https://images.unsplash.com/photo-1607962837359-5e7e89f86776",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Neurofeedback Behandeling | Hersentraining voor Mentale Gezondheid | rTMS Kliniek",
+    title: "Neurofeedback Behandeling | Hersentraining voor Mentale Gezondheid | rtms behandeling",
     description:
       "Leer uw hersenen opnieuw te programmeren met neurofeedback, een effectieve behandelmethode voor diverse psychische klachten en cognitieve uitdagingen.",
     images: ["https://images.unsplash.com/photo-1580130379624-3a069adbfbb5"],
@@ -42,7 +42,7 @@ const NeurofeedbackPage = () => {
     "@type": "MedicalProcedure",
     "name": "Neurofeedback Behandeling",
     "alternateName": "EEG Biofeedback",
-    "url": "https://rtms-kliniek.nl/neurofeedback",
+    "url": "https://rtms-behandeling.nl/neurofeedback",
     "image": "https://images.unsplash.com/photo-1580130379624-3a069adbfbb5",
     "description": "Neurofeedback is een vorm van biofeedback die specifiek gericht is op de hersenen. Het is een niet-invasieve techniek waarbij sensoren op de hoofdhuid de hersenactiviteit meten en deze informatie direct terugkoppelen aan de patiënt, die vervolgens leert om zijn of haar hersenactiviteit bewust te reguleren.",
     "medicalSpecialty": "Neurologie, Psychiatrie",
@@ -54,9 +54,9 @@ const NeurofeedbackPage = () => {
     "status": "EventScheduled",
     "provider": {
       "@type": "MedicalOrganization",
-      "name": "rTMS Kliniek",
-      "url": "https://rtms-kliniek.nl",
-      "logo": "https://rtms-kliniek.nl/logo.png",
+      "name": "rtms behandeling",
+      "url": "https://rtms-behandeling.nl",
+      "logo": "https://rtms-behandeling.nl/logo.png",
       "address": [
         {
           "@type": "PostalAddress",
@@ -151,11 +151,11 @@ const NeurofeedbackPage = () => {
         <div className="mt-5 text-center">
           <p>
             Neurofeedback is een geavanceerde, niet-invasieve techniek die u helpt controle te krijgen 
-            over uw hersenactiviteit. Bij rTMS Kliniek bieden we state-of-the-art neurofeedbackbehandelingen 
+            over uw hersenactiviteit. Bij rtms behandeling bieden we state-of-the-art neurofeedbackbehandelingen 
             die u kunnen helpen bij het verbeteren van concentratie, het verminderen van angst en stress, 
             het reguleren van uw stemming en het verbeteren van uw algemene cognitieve prestaties.
           </p>
-          <Link href="/contact">
+          <Link href="/afspraak-maken">
             <Button className="mt-5">Afspraak maken</Button>
           </Link>
         </div>
@@ -406,7 +406,7 @@ const NeurofeedbackPage = () => {
         
         <div className="bg-[#7ed957] p-16 rounded-3xl text-white flex-col justify-between items-center text-center">
           <h3 className="font-semibold text-3xl md:text-5xl">Klaar om uw hersenen te trainen met neurofeedback?</h3>
-          <Link href="/contact">
+          <Link href="/afspraak-maken">
             <Button className="mt-5">Afspraak inplannen</Button>
           </Link>
         </div>  

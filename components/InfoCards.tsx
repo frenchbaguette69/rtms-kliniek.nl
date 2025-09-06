@@ -10,7 +10,7 @@ const InfoCards = () => {
       title: "rTMS Behandeling",
       description:
         "Effectieve rTMS therapie bij depressie en obsessieve-compulsieve stoornis (OCS), volledig zonder medicatie. Wetenschappelijk bewezen resultaat.",
-      link: "/rtms-behandeling",
+      link: "/",
     },
     {
       icon: <FiSmile className="w-10 h-10 text-white" />,

@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "rTMS Behandeling bij Depressie en Angst | rTMS Kliniek Nederland",
+  title: "rTMS Behandeling bij Depressie en Angst | rtms behandeling Nederland",
   description:
     "Effectieve rTMS behandeling voor depressie, angst en OCD. Geen medicatie nodig, wetenschappelijk bewezen. Plan nu een intake bij onze gespecialiseerde kliniek.",
 };
@@ -45,28 +45,22 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebPage",
               "name": "rTMS Behandeling - Effectieve Therapie voor Depressie & Angst",
-              "url": "https://rtms-kliniek.nl",
+              "url": "https://rtms-behandeling.nl",
               "description":
                 "rTMS Behandeling is een innovatieve, niet-invasieve therapie voor depressie, angststoornissen en OCD. Ontdek hoe rTMS therapie jou kan helpen en plan een intake.",
               "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2668&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               "publisher": {
                 "@type": "Organization",
-                "name": "rTMS Kliniek",
+                "name": "rtms behandeling",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://rtms-kliniek.nl/RTMSlogo.png"
+                  "url": "https://rtms-behandeling.nl/RTMSlogo.png"
                 }
               },
               "author": {
                 "@type": "Person",
                 "name": "Jouw Naam"
               },
-              "mainEntity": {
-                "@type": "MedicalWebPage",
-                "name": "rTMS Therapie",
-                "medicalSpecialty": "Neurology",
-                "url": "https://rtms-kliniek.nl/rtms-behandeling"
-              }
             }),
           }}
         />

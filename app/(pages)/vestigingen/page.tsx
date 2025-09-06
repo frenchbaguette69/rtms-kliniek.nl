@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
 
 export const metadata: Metadata = {
-  title: "Onze vestigingen | rTMS kliniek",
+  title: "Onze vestigingen | rtms behandeling",
   description: "",
 };
 

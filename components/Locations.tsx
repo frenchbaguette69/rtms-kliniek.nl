@@ -12,7 +12,7 @@ const Locations = () => {
           rTMS behandelen? Bezoek een van onze klnieken.
         </h2>
         <p className="mt-4 text-gray-600 text-lg">
-          Momenteel heeft rTMS kliniek 2 verschillende vestigingen in
+          Momenteel heeft rtms behandeling 2 verschillende vestigingen in
           Nederland.
         </p>
         <a
@@ -22,7 +22,7 @@ const Locations = () => {
           <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#7ed957]">
             <FiArrowUpRight className="w-6 h-6" />
           </div>
-          Vind een rTMS kliniek
+          Vind een rtms behandeling
         </a>
       </div>
 

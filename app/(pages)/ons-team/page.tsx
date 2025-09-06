@@ -6,21 +6,21 @@ import { Button } from "@/components/ui/button";
 import RTMSInfo from "@/components/RTMSInfo";
 
 export const metadata: Metadata = {
-  title: "Ons Professionele Team | Experts in rTMS Behandelingen | rTMS Kliniek",
+  title: "Ons Professionele Team | Experts in rTMS Behandelingen | rtms behandeling",
   description:
     "Maak kennis met ons ervaren team van specialisten in rTMS behandelingen. Onze deskundige artsen, psychologen en verpleegkundigen staan klaar om u te begeleiden bij uw rTMS behandeltraject voor depressie, angststoornissen en meer.",
   openGraph: {
-    title: "Ons Professionele Team | Experts in rTMS Behandelingen | rTMS Kliniek",
+    title: "Ons Professionele Team | Experts in rTMS Behandelingen | rtms behandeling",
     description: 
       "Maak kennis met ons ervaren team van rTMS specialisten. Onze deskundige artsen, psychologen en verpleegkundigen staan klaar om u te begeleiden met persoonlijke aandacht en expertise.",
-    url: "https://rtms-kliniek.nl/ons-team",
-    siteName: "rTMS kliniek",
+    url: "https://rtms-behandeling.nl/ons-team",
+    siteName: "rtms behandeling",
     images: [
       {
         url: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca",
         width: 1200,
         height: 630,
-        alt: "rTMS kliniek team"
+        alt: "rtms behandeling team"
       },
     ],
     locale: "nl_NL",
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ons Professionele Team | Experts in rTMS Behandelingen | rTMS Kliniek",
+    title: "Ons Professionele Team | Experts in rTMS Behandelingen | rtms behandeling",
     description:
-      "Maak kennis met de specialisten van rTMS Kliniek die zich inzetten voor uw welzijn met innovatieve rTMS behandelingen.",
+      "Maak kennis met de specialisten van rtms behandeling die zich inzetten voor uw welzijn met innovatieve rTMS behandelingen.",
     images: ["https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca"],
   },
 };
@@ -40,8 +40,8 @@ const OnsTeamPage = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalOrganization",
-    "name": "rTMS Kliniek",
-    "url": "https://rtms-kliniek.nl/ons-team",
+    "name": "rtms behandeling",
+    "url": "https://rtms-behandeling.nl/ons-team",
     "image": "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca",
     "description": "Ons ervaren team van specialisten in rTMS behandelingen bestaat uit psychiaters, neurologen, psychologen en ondersteunend personeel die samen zorgen voor de beste behandeling en persoonlijke begeleiding.",
     "medicalSpecialty": "rTMS behandelingen, Psychiatrie, Neurologie",
@@ -143,11 +143,11 @@ const OnsTeamPage = () => {
         
         <div className="mt-5 text-center">
           <p>
-            Bij rTMS Kliniek staat een team van toegewijde professionals voor u klaar, elk met hun eigen
+            Bij rtms behandeling staat een team van toegewijde professionals voor u klaar, elk met hun eigen
             expertise op het gebied van rTMS behandelingen en geestelijke gezondheidszorg. Samen zetten wij 
             ons in voor uw welzijn met persoonlijke aandacht, vakkennis en inzet.
           </p>
-          <Link href="/contact">
+          <Link href="/afspraak-maken">
             <Button className="mt-5">Afspraak maken</Button>
           </Link>
         </div>
@@ -155,7 +155,7 @@ const OnsTeamPage = () => {
         <div className="flex justify-center mt-10">
           <Image 
             src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1000&h=600&auto=format&fit=crop" 
-            alt="rTMS Kliniek Team" 
+            alt="rtms behandeling Team" 
             height={600} 
             width={1000} 
             title="ons-professionele-team" 
@@ -217,7 +217,7 @@ const OnsTeamPage = () => {
         <div className="p-8">
           <h2 className="text-3xl font-semibold mb-5">Onze Aanpak</h2>
           <p className="mb-4">
-            Bij rTMS Kliniek geloven we in een persoonlijke en holistische benadering van zorg:
+            Bij rtms behandeling geloven we in een persoonlijke en holistische benadering van zorg:
           </p>
           <ul className="list-disc pl-5 space-y-2">
             <li><strong>Persoonlijk behandelplan:</strong> We ontwikkelen een op maat gemaakt behandelplan dat aansluit bij uw specifieke behoeften en omstandigheden.</li>
@@ -240,7 +240,7 @@ const OnsTeamPage = () => {
         
         <div className="bg-[#7ed957] p-16 rounded-3xl text-white flex-col justify-between items-center text-center">
           <h3 className="font-semibold text-3xl md:text-5xl">Wilt u kennismaken met ons team?</h3>
-          <Link href="/contact">
+          <Link href="/afspraak-maken">
             <Button className="mt-5">Afspraak inplannen</Button>
           </Link>
         </div>  
