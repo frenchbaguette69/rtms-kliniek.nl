@@ -1,90 +1,113 @@
-import { NextResponse } from "next/server"
-import nodemailer from "nodemailer"
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
+    const data = await req.json();
+
+    // haal exact de keys op die je client verstuurt
     const {
       service,
       location,
       preferredDate,
       preferredTime,
-      name,
+      firstName,
+      infix,
+      lastName,
       email,
       phone,
-      birthDate,
-      address,
-      postalCode,
+      dob,
+      postcode,
       city,
       message,
-      honeypot,
-    } = await req.json()
+      consent,
+    } = data || {};
 
-    if (honeypot) {
-      return NextResponse.json({ success: false, error: "Spam detected" }, { status: 400 })
+    // server-side minimale validatie
+    const missing = [];
+    if (!service) missing.push("service");
+    if (!location) missing.push("location");
+    if (!preferredDate) missing.push("preferredDate");
+    if (!firstName) missing.push("firstName");
+    if (!lastName) missing.push("lastName");
+    if (!email) missing.push("email");
+    if (!phone) missing.push("phone");
+    if (!dob) missing.push("dob");
+    if (!postcode) missing.push("postcode");
+    if (!city) missing.push("city");
+    if (!consent) missing.push("consent");
+
+    if (missing.length) {
+      return NextResponse.json(
+        { success: false, message: `Ontbrekende velden: ${missing.join(", ")}` },
+        { status: 400 }
+      );
     }
+
+    const fullName = [firstName, infix, lastName].filter(Boolean).join(" ");
+    const niceDate = preferredDate || "-";
+    const niceTime = preferredTime || "-";
 
     const transporter = nodemailer.createTransport({
       host: "smtp.strato.com",
-      port: 465, // of 587 als je liever TLS gebruikt
-      secure: true, // true voor 465, false voor 587
+      port: 465,        // gebruik 587 + secure:false als je TLS/startTLS wilt
+      secure: true,
       auth: {
-        user: process.env.SMTP_USER, // bv. info@jouwdomein.nl
-        pass: process.env.SMTP_PASS, // mailbox wachtwoord
+        user: process.env.SMTP_USER!,
+        pass: process.env.SMTP_PASS!,
       },
-    })
+    });
 
-    const emailText = `
+    const text = `
 Nieuwe afspraak aanvraag
 
 Service: ${service}
 Locatie: ${location}
-Gewenste datum: ${preferredDate}
-Gewenste tijd: ${preferredTime}
+Gewenste datum: ${niceDate}
+Gewenste tijd: ${niceTime}
 
 Persoonlijke gegevens:
-Naam: ${name}
+Naam: ${fullName}
 Email: ${email}
 Telefoon: ${phone}
-Geboortedatum: ${birthDate}
-Adres: ${address}
-Postcode: ${postalCode}
+Geboortedatum: ${dob}
+Postcode: ${postcode}
 Plaats: ${city}
 
-${message ? `Bericht: ${message}` : ""}
-    `.trim()
+${message ? `Opmerking:\n${message}` : ""}
+`.trim();
 
-    const emailHtml = `
-      <h2>Nieuwe afspraak aanvraag</h2>
-      
-      <h3>Service informatie</h3>
-      <p><strong>Service:</strong> ${service}</p>
-      <p><strong>Locatie:</strong> ${location}</p>
-      <p><strong>Gewenste datum:</strong> ${preferredDate}</p>
-      <p><strong>Gewenste tijd:</strong> ${preferredTime}</p>
-      
-      <h3>Persoonlijke gegevens</h3>
-      <p><strong>Naam:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Telefoon:</strong> ${phone}</p>
-      <p><strong>Geboortedatum:</strong> ${birthDate}</p>
-      <p><strong>Adres:</strong> ${address}</p>
-      <p><strong>Postcode:</strong> ${postalCode}</p>
-      <p><strong>Plaats:</strong> ${city}</p>
-      
-      ${message ? `<h3>Bericht</h3><p>${message}</p>` : ""}
-    `
+    const html = `
+<h2>Nieuwe afspraak aanvraag</h2>
+
+<h3>Service informatie</h3>
+<p><strong>Service:</strong> ${service}</p>
+<p><strong>Locatie:</strong> ${location}</p>
+<p><strong>Gewenste datum:</strong> ${niceDate}</p>
+<p><strong>Gewenste tijd:</strong> ${niceTime}</p>
+
+<h3>Persoonlijke gegevens</h3>
+<p><strong>Naam:</strong> ${fullName}</p>
+<p><strong>Email:</strong> ${email}</p>
+<p><strong>Telefoon:</strong> ${phone}</p>
+<p><strong>Geboortedatum:</strong> ${dob}</p>
+<p><strong>Postcode:</strong> ${postcode}</p>
+<p><strong>Plaats:</strong> ${city}</p>
+${message ? `<h3>Opmerking</h3><p>${String(message).replace(/\n/g, "<br/>")}</p>` : ""}
+`.trim();
 
     await transporter.sendMail({
-      from: `"Website afspraak" <${process.env.SMTP_USER}>`,
-      to: "marcowammes@outlook.com",
-      subject: "Nieuwe afspraak aanvraag",
-      text: emailText,
-      html: emailHtml,
-    })
+      from: `"Website afspraak" <${process.env.SMTP_USER!}>`,
+      to: process.env.MAIL_TO || "marcowammes@outlook.com",
+      replyTo: email,
+      subject: `Nieuwe afspraakaanvraag – ${fullName}`,
+      text,
+      html,
+    });
 
-    return NextResponse.json({ success: true })
+    return NextResponse.json({ success: true });
   } catch (error) {
-    console.error(error)
-    return NextResponse.json({ success: false }, { status: 500 })
+    console.error("APPOINTMENT_MAIL_ERROR", error);
+    return NextResponse.json({ success: false, message: "Versturen mislukt." }, { status: 500 });
   }
 }
